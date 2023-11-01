@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "19202180327",
+    "project_id": "rivinsight-b418d",
+    "storage_bucket": "rivinsight-b418d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19202180327:android:1fce7b437060e58be88e42",
+        "android_client_info": {
+          "package_name": "com.mycompany.rivinsight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZTII6uSRlmk5l6Dy87Fa6S2yY4rvpPNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
