@@ -30,6 +30,8 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => BottomNavBarModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -67,7 +69,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
           icon: Icon(
             Icons.explore_outlined,
             color: FlutterFlowTheme.of(context).primary,
-            size: 24.0,
+            size: 27.0,
           ),
           onPressed: () {
             print('IconButton pressed ...');
@@ -80,7 +82,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
           icon: Icon(
             Icons.people_outline_rounded,
             color: FlutterFlowTheme.of(context).primary,
-            size: 24.0,
+            size: 27.0,
           ),
           onPressed: () {
             print('IconButton pressed ...');
@@ -93,7 +95,7 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
           icon: Icon(
             Icons.account_circle_outlined,
             color: FlutterFlowTheme.of(context).primary,
-            size: 24.0,
+            size: 27.0,
           ),
           onPressed: () {
             print('IconButton pressed ...');

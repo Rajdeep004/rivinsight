@@ -16,6 +16,12 @@
 	<string>rivinsight</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>hi</string>
+		<string>gu</string>
+	</array>
 
 	<key>CFBundleShortVersionString</key>
 	<string>$(FLUTTER_BUILD_NAME)</string>
@@ -54,7 +60,8 @@
 	<true/>
 
 
-
+	<key>PermissionGroupNotification</key>
+    <string>Allow rivinsight to send Notifications?</string>
 
 
 	<key>UILaunchStoryboardName</key>
