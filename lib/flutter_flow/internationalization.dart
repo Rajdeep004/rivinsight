@@ -108,311 +108,580 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // HomePage
   {
-    '98zk6tdj': {
+    'tfelqbqu': {
       'en': 'rivinsight',
-      'gu': 'રિવિન્સાઈટ',
-      'hi': 'rivinsight',
+      'gu': '',
+      'hi': '',
     },
-    '357vmj3h': {
+    '162h702h': {
       'en': 'Sabarmati River Information ',
-      'gu': 'સાબરમતી નદીની માહિતી',
-      'hi': 'साबरमती नदी की जानकारी',
+      'gu': '',
+      'hi': '',
     },
-    '1ehx5v3g': {
+    'i14fj6eg': {
       'en': 'Water Quality',
-      'gu': 'પાણીની ગુણવત્તા',
-      'hi': 'पानी की गुणवत्ता',
+      'gu': '',
+      'hi': '',
     },
-    '33knysio': {
+    '9tenxqud': {
       'en': 'Water FLow',
-      'gu': 'જળપ્રવાહ',
-      'hi': 'पानी का प्रवाह',
+      'gu': '',
+      'hi': '',
     },
-    '82vw2k1x': {
+    'hg40cr3s': {
       'en': 'Minarals',
-      'gu': 'મિનરલ્સ',
-      'hi': 'खनिज पदार्थ',
+      'gu': '',
+      'hi': '',
     },
-    '5a2sx184': {
+    'a5h1epli': {
       'en': 'Water Level',
-      'gu': 'પાણીનું સ્તર',
-      'hi': 'पानी की सतह',
+      'gu': '',
+      'hi': '',
     },
-    'sbxlfo8s': {
+    'lg92ibsu': {
       'en': 'Temperature ',
-      'gu': 'તાપમાન',
-      'hi': 'तापमान',
+      'gu': '',
+      'hi': '',
     },
-    'eauki6hy': {
+    'zw4xnmwj': {
       'en': 'Weather Information',
-      'gu': 'હવામાન માહિતી',
-      'hi': 'मौसम की जानकारी',
+      'gu': '',
+      'hi': '',
     },
-    'rec08qpn': {
+    'cfa8vgrd': {
       'en': 'Weather ',
-      'gu': 'હવામાન',
-      'hi': 'मौसम',
+      'gu': '',
+      'hi': '',
     },
-    '7a8jk8zo': {
+    '5arfr7dk': {
       'en': 'Flood Risk',
-      'gu': 'પૂરનું જોખમ',
-      'hi': 'बाढ़ का खतरा',
+      'gu': '',
+      'hi': '',
     },
-    'yky71ogq': {
+    'pq46lcqh': {
       'en': '12%',
-      'gu': '12%',
-      'hi': '12%',
+      'gu': '',
+      'hi': '',
     },
-    '39wzbbyu': {
+    'u0xsk1xv': {
       'en': 'Home',
-      'gu': 'ઘર',
-      'hi': 'घर',
+      'gu': '',
+      'hi': '',
     },
   },
   // Auth1
   {
-    'reelhfm7': {
+    'uv4wi7s2': {
       'en': 'Sign In',
-      'gu': 'સાઇન ઇન કરો',
-      'hi': 'दाखिल करना',
+      'gu': '',
+      'hi': '',
     },
-    'ha3f4y04': {
+    'yprtkq3o': {
       'en': 'Sign Up',
-      'gu': 'સાઇન અપ કરો',
-      'hi': 'साइन अप करें',
+      'gu': '',
+      'hi': '',
     },
-    '76losvwu': {
+    'nl7f7sp3': {
       'en': 'Let\'s get started by filling out the form below.',
-      'gu': 'ચાલો નીચેનું ફોર્મ ભરીને શરૂઆત કરીએ.',
-      'hi': 'आइए नीचे दिया गया फॉर्म भरकर शुरुआत करें।',
+      'gu': '',
+      'hi': '',
     },
-    's2d7cblr': {
+    'hgfukbsn': {
       'en': 'Email',
-      'gu': 'ઈમેલ',
-      'hi': 'ईमेल',
+      'gu': '',
+      'hi': '',
     },
-    'wll360xx': {
+    'xp6hco6f': {
       'en': 'Password',
-      'gu': 'પાસવર્ડ',
-      'hi': 'पासवर्ड',
+      'gu': '',
+      'hi': '',
     },
-    'xh7cweam': {
+    '3l5khidi': {
       'en': 'Sign In',
-      'gu': 'સાઇન ઇન કરો',
-      'hi': 'दाखिल करना',
+      'gu': '',
+      'hi': '',
     },
-    'jws0hxzb': {
+    'u7kafb0o': {
       'en': 'Forgot Password',
-      'gu': 'પાસવર્ડ ભૂલી ગયા છો',
-      'hi': 'पासवर्ड भूल गए',
+      'gu': '',
+      'hi': '',
     },
-    'ihch3ioy': {
+    'ktm2sgg8': {
       'en': 'Or sign up with',
-      'gu': 'અથવા સાથે સાઇન અપ કરો',
-      'hi': 'या इसके साथ साइन अप करें',
+      'gu': '',
+      'hi': '',
     },
-    'x9jsx3ei': {
+    'yv6uxdlh': {
       'en': 'Continue with Google',
-      'gu': 'Google સાથે ચાલુ રાખો',
-      'hi': 'Google के साथ जारी रखें',
+      'gu': '',
+      'hi': '',
     },
-    '5hp9afvv': {
+    'dtup9035': {
       'en': 'Continue with Apple',
-      'gu': 'Apple સાથે ચાલુ રાખો',
-      'hi': 'एप्पल के साथ जारी रखें',
+      'gu': '',
+      'hi': '',
     },
-    'r5glt34a': {
+    'n89h5qw8': {
       'en': 'Email',
-      'gu': 'ઈમેલ',
-      'hi': 'ईमेल',
+      'gu': '',
+      'hi': '',
     },
-    'euck9wr5': {
+    'suyzgv60': {
       'en': 'Password',
-      'gu': 'પાસવર્ડ',
-      'hi': 'पासवर्ड',
+      'gu': '',
+      'hi': '',
     },
-    'aocof8sm': {
+    'ip9holjf': {
       'en': 'Confirm Password',
-      'gu': 'પાસવર્ડની પુષ્ટિ કરો',
-      'hi': 'पासवर्ड की पुष्टि कीजिये',
+      'gu': '',
+      'hi': '',
     },
-    'tbcal48s': {
+    'allrkeef': {
       'en': 'Create Account',
-      'gu': 'ખાતું બનાવો',
-      'hi': 'खाता बनाएं',
+      'gu': '',
+      'hi': '',
     },
-    'r19isetu': {
+    'hltbh0hc': {
       'en': 'Or sign up with',
-      'gu': 'અથવા સાથે સાઇન અપ કરો',
-      'hi': 'या इसके साथ साइन अप करें',
+      'gu': '',
+      'hi': '',
     },
-    'kg6amz43': {
+    'jdy20o18': {
       'en': 'Continue with Google',
-      'gu': 'Google સાથે ચાલુ રાખો',
-      'hi': 'Google के साथ जारी रखें',
+      'gu': '',
+      'hi': '',
     },
-    '6kh73lhv': {
+    'w1fy4kc3': {
       'en': 'Continue with Apple',
-      'gu': 'Apple સાથે ચાલુ રાખો',
-      'hi': 'एप्पल के साथ जारी रखें',
+      'gu': '',
+      'hi': '',
     },
-    'z7f5g0cm': {
+    '4ybsfs6l': {
       'en': 'Home',
-      'gu': 'ઘર',
-      'hi': 'घर',
+      'gu': '',
+      'hi': '',
     },
   },
-  // ProfilePage
+  // profile
   {
-    'edma6tmv': {
+    'v1ooe6yy': {
+      'en': 'Andrew D.',
+      'gu': '',
+      'hi': '',
+    },
+    'ksx9p1u3': {
+      'en': 'andrew@domainname.com',
+      'gu': '',
+      'hi': '',
+    },
+    'qykwxueb': {
+      'en': 'Your Account',
+      'gu': '',
+      'hi': '',
+    },
+    'j65f7yws': {
       'en': 'Edit Profile',
       'gu': '',
       'hi': '',
     },
-    'mi1305l1': {
-      'en': 'Change Password',
-      'gu': '',
-      'hi': '',
-    },
-    'bq0euvek': {
+    'oq97oluq': {
       'en': 'Notification Settings',
       'gu': '',
       'hi': '',
     },
-    '5hwjrmgs': {
-      'en': 'Terms of Services',
+    '6gqj800m': {
+      'en': 'App Settings',
       'gu': '',
       'hi': '',
     },
-    '3icpcb3r': {
+    'g1q83gri': {
+      'en': 'Support',
+      'gu': '',
+      'hi': '',
+    },
+    'q4c5spqh': {
+      'en': 'Terms of Service',
+      'gu': '',
+      'hi': '',
+    },
+    '1s0y2rmq': {
       'en': 'Log Out',
       'gu': '',
       'hi': '',
     },
-    'bnqrbi6x': {
+    '92rqt4jf': {
       'en': 'Profile',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // explore
+  {
+    'ggxpgxcx': {
+      'en': 'Search listings...',
+      'gu': '',
+      'hi': '',
+    },
+    'ofxgr9ny': {
+      'en': 'Rivers',
+      'gu': '',
+      'hi': '',
+    },
+    'hyiv5s8j': {
+      'en': 'Maidstone, San Antonio, Tx.',
+      'gu': '',
+      'hi': '',
+    },
+    'r0zjienl': {
+      'en': '\$210/night',
+      'gu': '',
+      'hi': '',
+    },
+    'hvn2cx10': {
+      'en': '32 miles away',
+      'gu': '',
+      'hi': '',
+    },
+    'jxbech65': {
+      'en': '4.25',
+      'gu': '',
+      'hi': '',
+    },
+    '5a5f60m2': {
+      'en': 'Maidstone, San Antonio, Tx.',
+      'gu': '',
+      'hi': '',
+    },
+    'kmyfwqk8': {
+      'en': '\$210/night',
+      'gu': '',
+      'hi': '',
+    },
+    'nltlkcpg': {
+      'en': '32 miles away',
+      'gu': '',
+      'hi': '',
+    },
+    '4rj5n7jh': {
+      'en': '4.25',
+      'gu': '',
+      'hi': '',
+    },
+    'k1meix2o': {
+      'en': 'Tourism',
+      'gu': '',
+      'hi': '',
+    },
+    'qo1sln2e': {
+      'en': 'Maidstone, San Antonio, Tx.',
+      'gu': '',
+      'hi': '',
+    },
+    'hy6gcqte': {
+      'en': '\$210/night',
+      'gu': '',
+      'hi': '',
+    },
+    '3uflvw0g': {
+      'en': '32 miles away',
+      'gu': '',
+      'hi': '',
+    },
+    '5x01epbn': {
+      'en': '4.25',
+      'gu': '',
+      'hi': '',
+    },
+    'rd46hg6q': {
+      'en': 'Maidstone, San Antonio, Tx.',
+      'gu': '',
+      'hi': '',
+    },
+    'p6bn021d': {
+      'en': '\$210/night',
+      'gu': '',
+      'hi': '',
+    },
+    'emrpvgkl': {
+      'en': '32 miles away',
+      'gu': '',
+      'hi': '',
+    },
+    'cbjmn9wv': {
+      'en': '4.25',
+      'gu': '',
+      'hi': '',
+    },
+    '8xloo0e1': {
+      'en': 'Explore',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // community
+  {
+    '48gcyz5b': {
+      'en': 'NEWS',
+      'gu': '',
+      'hi': '',
+    },
+    '8r1kfzay': {
+      'en': 'COMMUNITY',
+      'gu': '',
+      'hi': '',
+    },
+    'r3w6ry2c': {
+      'en': 'FORUMS',
+      'gu': '',
+      'hi': '',
+    },
+    'dtp8usnm': {
+      'en': 'GROUPS',
+      'gu': '',
+      'hi': '',
+    },
+    'siy24osb': {
+      'en': 'Breaking News',
+      'gu': '',
+      'hi': '',
+    },
+    'y0mf45ac': {
+      'en':
+          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
+      'gu': '',
+      'hi': '',
+    },
+    'u86ub34l': {
+      'en': 'Breaking News',
+      'gu': '',
+      'hi': '',
+    },
+    '609kjm3c': {
+      'en':
+          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
+      'gu': '',
+      'hi': '',
+    },
+    'xxwhcqla': {
+      'en': 'Breaking News',
+      'gu': '',
+      'hi': '',
+    },
+    'cplsgswq': {
+      'en':
+          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
+      'gu': '',
+      'hi': '',
+    },
+    '0gc1jrpb': {
+      'en': 'Breaking News',
+      'gu': '',
+      'hi': '',
+    },
+    'adftxliy': {
+      'en':
+          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
+      'gu': '',
+      'hi': '',
+    },
+    'y0nfwpsx': {
+      'en': 'Breaking News',
+      'gu': '',
+      'hi': '',
+    },
+    '6h4ma2jr': {
+      'en':
+          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
+      'gu': '',
+      'hi': '',
+    },
+    '8wxg75dj': {
+      'en': 'Community ',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // HomePageCopy
+  {
+    'pdtbe4i7': {
+      'en': 'rivinsight',
+      'gu': '',
+      'hi': '',
+    },
+    '1fee4kkj': {
+      'en': 'Water Quality',
+      'gu': '',
+      'hi': '',
+    },
+    's69a1v4v': {
+      'en': 'Tab View 1',
+      'gu': '',
+      'hi': '',
+    },
+    '3apn0q9i': {
+      'en': 'Example 2',
+      'gu': '',
+      'hi': '',
+    },
+    'nin8r7o8': {
+      'en': 'Tab View 2',
+      'gu': '',
+      'hi': '',
+    },
+    'l4sl3el5': {
+      'en': 'Example 3',
+      'gu': '',
+      'hi': '',
+    },
+    'rcajrz1a': {
+      'en': 'Tab View 3',
+      'gu': '',
+      'hi': '',
+    },
+    'p7rds43f': {
+      'en': 'Weather Information',
+      'gu': '',
+      'hi': '',
+    },
+    'pzdcbupw': {
+      'en': 'Weather ',
+      'gu': '',
+      'hi': '',
+    },
+    'urn9jc74': {
+      'en': 'Flood Risk',
+      'gu': '',
+      'hi': '',
+    },
+    'hvr6mswe': {
+      'en': '12%',
+      'gu': '',
+      'hi': '',
+    },
+    'j4j13bx5': {
+      'en': 'Home',
       'gu': '',
       'hi': '',
     },
   },
   // Miscellaneous
   {
-    'pu7akcbu': {
-      'en': 'Allow rivinsight to send Notifications?',
-      'gu': 'rivinsight ને સૂચનાઓ મોકલવાની મંજૂરી આપીએ?',
-      'hi': 'रिविंसाइट को सूचनाएं भेजने की अनुमति दें?',
+    'y74kna8q': {
+      'en': 'Allow Us To Notofy You About Emergency ',
+      'gu': '',
+      'hi': '',
     },
-    'hailxhv1': {
+    'lo0n27vf': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    '54t7jfmw': {
+    '9od5ploe': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'jdewea0a': {
+    'ngsvvz8c': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'bqpdsbvh': {
+    '0gwu0s5q': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'i8gxwif9': {
+    'mgzm74bm': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'qpr496tw': {
+    'x88f4wlq': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'rxit8a70': {
+    '5odrdpnl': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'c7l6wolw': {
+    '2slxlzji': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    '0ill99x8': {
+    'vr9ka7qj': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'ptykwnz7': {
+    '6mwrvmdh': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'zkd9fu7n': {
+    'ted6gbxi': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'x230qjae': {
+    '6wz2m1cg': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    '4ktrlw19': {
+    '4in9rp2u': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    '9budqwwe': {
+    'qouktosr': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    '9zloapmk': {
+    'jqgw0qze': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'syc5fsdm': {
+    '4pn1339s': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'qqpo4yav': {
+    'r86kduwz': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'ygtr0f8x': {
+    'svytg9fg': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'lmt3bdgz': {
+    '6yv4nm4u': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    '59mqyhf4': {
+    '09qsklbf': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'rhbl5jjp': {
+    'dnvcc4ye': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    '4kdvovj6': {
+    'eqx7fbkp': {
       'en': '',
       'gu': '',
       'hi': '',
     },
-    'j0vjj7gt': {
+    'ji642dlj': {
       'en': '',
       'gu': '',
       'hi': '',

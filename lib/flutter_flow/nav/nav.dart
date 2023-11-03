@@ -5,7 +5,6 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -97,15 +96,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'Auth1',
-          path: '/auth',
+          path: '/auth1',
           builder: (context, params) => Auth1Widget(),
         ),
         FFRoute(
-          name: 'ProfilePage',
-          path: '/profilePage',
+          name: 'profile',
+          path: '/profile',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'ProfilePage')
-              : ProfilePageWidget(),
+              ? NavBarPage(initialPage: 'profile')
+              : ProfileWidget(),
+        ),
+        FFRoute(
+          name: 'explore',
+          path: '/explore',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'explore')
+              : ExploreWidget(),
+        ),
+        FFRoute(
+          name: 'community',
+          path: '/community',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'community')
+              : CommunityWidget(),
+        ),
+        FFRoute(
+          name: 'HomePageCopy',
+          path: '/homePageCopy',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'HomePageCopy')
+              : HomePageCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -224,7 +244,6 @@ class FFParameters {
     String paramName,
     ParamType type, [
     bool isList = false,
-    List<String>? collectionNamePath,
   ]) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -238,8 +257,11 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(param, type, isList,
-        collectionNamePath: collectionNamePath);
+    return deserializeParam<T>(
+      param,
+      type,
+      isList,
+    );
   }
 }
 
@@ -272,7 +294,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/auth';
+            return '/auth1';
           }
           return null;
         },

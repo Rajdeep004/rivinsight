@@ -61,7 +61,7 @@
 
 
 	<key>PermissionGroupNotification</key>
-    <string>Allow rivinsight to send Notifications?</string>
+    <string>Allow Us To Notofy You About Emergency </string>
 
 
 	<key>UILaunchStoryboardName</key>
