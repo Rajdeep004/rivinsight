@@ -5,6 +5,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -88,13 +89,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? NavBarPage() : Auth1Widget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'HomePage')
-              : HomePageWidget(),
-        ),
-        FFRoute(
           name: 'Auth1',
           path: '/auth1',
           builder: (context, params) => Auth1Widget(),
@@ -121,11 +115,35 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : CommunityWidget(),
         ),
         FFRoute(
-          name: 'HomePageCopy',
-          path: '/homePageCopy',
+          name: 'HomePage',
+          path: '/homePage',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'HomePageCopy')
-              : HomePageCopyWidget(),
+              ? NavBarPage(initialPage: 'HomePage')
+              : HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'newsfeed',
+          path: '/newsfeed',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: NewsfeedWidget(),
+          ),
+        ),
+        FFRoute(
+          name: 'detailspage',
+          path: '/detailspage',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: DetailspageWidget(),
+          ),
+        ),
+        FFRoute(
+          name: 'photogallery',
+          path: '/photogallery',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: PhotogalleryWidget(),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -244,6 +262,7 @@ class FFParameters {
     String paramName,
     ParamType type, [
     bool isList = false,
+    List<String>? collectionNamePath,
   ]) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -257,11 +276,8 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(
-      param,
-      type,
-      isList,
-    );
+    return deserializeParam<T>(param, type, isList,
+        collectionNamePath: collectionNamePath);
   }
 }
 

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "19202180327",
+    "firebase_url": "https://rivinsight-b418d-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "rivinsight-b418d",
     "storage_bucket": "rivinsight-b418d.appspot.com"
   },
@@ -12,7 +13,28 @@
           "package_name": "com.mycompany.rivinsight"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "19202180327-bean5t57b7o6d52usuoj3vfmu3vdd6m6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.rivinsight",
+            "certificate_hash": "3cb99d7e2b1a82846f893c5bf3facee3c5cef631"
+          }
+        },
+        {
+          "client_id": "19202180327-smavdnq8437lmasnhca7as3phj3mvjec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.rivinsight",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "19202180327-tqdvop5s5qvpn2je01kbmse5fjjkq4nr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCZTII6uSRlmk5l6Dy87Fa6S2yY4rvpPNs"
@@ -20,7 +42,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19202180327-tqdvop5s5qvpn2je01kbmse5fjjkq4nr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "19202180327-vsb5vjq89gej4d6s95a4e7kh4int4iv7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.rivinsight"
+              }
+            }
+          ]
         }
       }
     }

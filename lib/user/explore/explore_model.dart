@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/user/appbarnew/appbarnew_widget.dart';
 import 'explore_widget.dart' show ExploreWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -22,9 +23,14 @@ class ExploreModel extends FlutterFlowModel<ExploreWidget> {
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
 
+  // Model for appbarnew component.
+  late AppbarnewModel appbarnewModel;
+
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    appbarnewModel = createModel(context, () => AppbarnewModel());
+  }
 
   void dispose() {
     unfocusNode.dispose();
@@ -32,6 +38,7 @@ class ExploreModel extends FlutterFlowModel<ExploreWidget> {
     textController?.dispose();
 
     tabBarController?.dispose();
+    appbarnewModel.dispose();
   }
 
   /// Action blocks are added here.

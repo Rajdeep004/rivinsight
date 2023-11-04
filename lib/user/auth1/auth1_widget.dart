@@ -109,6 +109,8 @@ class _Auth1WidgetState extends State<Auth1Widget>
 
     _model.passwordConfirmController ??= TextEditingController();
     _model.passwordConfirmFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -137,7 +139,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -147,7 +149,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                 width: 100.0,
                 height: double.infinity,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: FlutterFlowTheme.of(context).primaryBackground,
                 ),
                 alignment: AlignmentDirectional(0.00, -1.00),
                 child: SingleChildScrollView(
@@ -517,63 +519,57 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                         Align(
                                           alignment:
                                               AlignmentDirectional(0.00, 0.00),
-                                          child: Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 16.0),
-                                            child: FFButtonWidget(
-                                              onPressed: () async {
-                                                GoRouter.of(context)
-                                                    .prepareAuthEvent();
+                                          child: FFButtonWidget(
+                                            onPressed: () async {
+                                              GoRouter.of(context)
+                                                  .prepareAuthEvent();
 
-                                                final user = await authManager
-                                                    .signInWithEmail(
-                                                  context,
-                                                  _model.emailAddressController
-                                                      .text,
-                                                  _model
-                                                      .passwordController.text,
-                                                );
-                                                if (user == null) {
-                                                  return;
-                                                }
+                                              final user = await authManager
+                                                  .signInWithEmail(
+                                                context,
+                                                _model.emailAddressController
+                                                    .text,
+                                                _model.passwordController.text,
+                                              );
+                                              if (user == null) {
+                                                return;
+                                              }
 
-                                                context.goNamedAuth('HomePage',
-                                                    context.mounted);
-                                              },
-                                              text: FFLocalizations.of(context)
-                                                  .getText(
-                                                '3l5khidi' /* Sign In */,
+                                              context.goNamedAuth(
+                                                  'HomePage', context.mounted);
+                                            },
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'j2qk0er1' /* Sign In */,
+                                            ),
+                                            options: FFButtonOptions(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  0.75,
+                                              height: 50.0,
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding: EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color: Colors.white,
+                                                      ),
+                                              elevation: 3.0,
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                                width: 1.0,
                                               ),
-                                              options: FFButtonOptions(
-                                                width: 230.0,
-                                                height: 52.0,
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 0.0),
-                                                iconPadding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                            0.0, 0.0, 0.0, 0.0),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: Colors.white,
-                                                        ),
-                                                elevation: 3.0,
-                                                borderSide: BorderSide(
-                                                  color: Colors.transparent,
-                                                  width: 1.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(40.0),
-                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(24.0),
                                             ),
                                           ),
                                         ),

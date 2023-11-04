@@ -15,6 +15,7 @@ import 'flutter_flow/internationalization.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
@@ -50,6 +51,8 @@ class _MyAppState extends State<MyApp> {
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
 
+  final authUserSub = authenticatedUserStream.listen((_) {});
+
   @override
   void initState() {
     super.initState();
@@ -63,6 +66,13 @@ class _MyAppState extends State<MyApp> {
       Duration(milliseconds: 2000),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
+  }
+
+  @override
+  void dispose() {
+    authUserSub.cancel();
+
+    super.dispose();
   }
 
   void setLocale(String language) {
@@ -92,7 +102,23 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: ScrollbarThemeData(
-          thumbVisibility: MaterialStateProperty.all(false),
+          thumbVisibility: MaterialStateProperty.all(true),
+          trackVisibility: MaterialStateProperty.all(false),
+          interactive: true,
+          thickness: MaterialStateProperty.all(10.0),
+          radius: Radius.circular(10.0),
+          thumbColor: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.dragged)) {
+              return Color(4293256677);
+            }
+            if (states.contains(MaterialState.hovered)) {
+              return Color(4278336098);
+            }
+            return Color(4278336098);
+          }),
+          minThumbLength: 20.0,
+          crossAxisMargin: 0.0,
+          mainAxisMargin: 0.0,
         ),
       ),
       themeMode: _themeMode,
@@ -130,13 +156,19 @@ class _NavBarPageState extends State<NavBarPage> {
       'explore': ExploreWidget(),
       'community': CommunityWidget(),
       'profile': ProfileWidget(),
-      'HomePageCopy': HomePageCopyWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
+    final MediaQueryData queryData = MediaQuery.of(context);
+
     return Scaffold(
-      body: _currentPage ?? tabs[_currentPageName],
-      bottomNavigationBar: BottomNavigationBar(
+      body: MediaQuery(
+          data: queryData
+              .removeViewInsets(removeBottom: true)
+              .removeViewPadding(removeBottom: true),
+          child: _currentPage ?? tabs[_currentPageName]!),
+      extendBody: true,
+      bottomNavigationBar: FloatingNavbar(
         currentIndex: currentIndex,
         onTap: (i) => setState(() {
           _currentPage = null;
@@ -145,59 +177,117 @@ class _NavBarPageState extends State<NavBarPage> {
         backgroundColor: Colors.white,
         selectedItemColor: FlutterFlowTheme.of(context).primary,
         unselectedItemColor: Colors.black,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.home,
-              size: 24.0,
+        selectedBackgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        borderRadius: 8.0,
+        itemBorderRadius: 8.0,
+        margin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        width: double.infinity,
+        elevation: 0.0,
+        items: [
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  FontAwesomeIcons.home,
+                  color: currentIndex == 0
+                      ? FlutterFlowTheme.of(context).primary
+                      : Colors.black,
+                  size: 24.0,
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'j4j13bx5' /* Home */,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 0
+                        ? FlutterFlowTheme.of(context).primary
+                        : Colors.black,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            label: FFLocalizations.of(context).getText(
-              'u0xsk1xv' /* Home */,
-            ),
-            tooltip: '',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.explore_sharp,
-              size: 27.0,
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.explore_sharp,
+                  color: currentIndex == 1
+                      ? FlutterFlowTheme.of(context).primary
+                      : Colors.black,
+                  size: 27.0,
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    '8xloo0e1' /* Explore */,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 1
+                        ? FlutterFlowTheme.of(context).primary
+                        : Colors.black,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            label: FFLocalizations.of(context).getText(
-              '8xloo0e1' /* Explore */,
-            ),
-            tooltip: '',
           ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.solidCommentDots,
-              size: 24.0,
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  FontAwesomeIcons.solidCommentDots,
+                  color: currentIndex == 2
+                      ? FlutterFlowTheme.of(context).primary
+                      : Colors.black,
+                  size: 24.0,
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    '8wxg75dj' /* Community  */,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 2
+                        ? FlutterFlowTheme.of(context).primary
+                        : Colors.black,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            label: FFLocalizations.of(context).getText(
-              '8wxg75dj' /* Community  */,
-            ),
-            tooltip: '',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_circle_rounded,
-              size: 30.0,
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.account_circle_rounded,
+                  color: currentIndex == 3
+                      ? FlutterFlowTheme.of(context).primary
+                      : Colors.black,
+                  size: 30.0,
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    '92rqt4jf' /* Profile */,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 3
+                        ? FlutterFlowTheme.of(context).primary
+                        : Colors.black,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            label: FFLocalizations.of(context).getText(
-              '92rqt4jf' /* Profile */,
-            ),
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.home,
-              size: 24.0,
-            ),
-            label: FFLocalizations.of(context).getText(
-              'j4j13bx5' /* Home */,
-            ),
-            tooltip: '',
           )
         ],
       ),

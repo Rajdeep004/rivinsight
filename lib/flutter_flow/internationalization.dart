@@ -106,69 +106,6 @@ Locale createLocale(String language) => language.contains('_')
     : Locale(language);
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // HomePage
-  {
-    'tfelqbqu': {
-      'en': 'rivinsight',
-      'gu': '',
-      'hi': '',
-    },
-    '162h702h': {
-      'en': 'Sabarmati River Information ',
-      'gu': '',
-      'hi': '',
-    },
-    'i14fj6eg': {
-      'en': 'Water Quality',
-      'gu': '',
-      'hi': '',
-    },
-    '9tenxqud': {
-      'en': 'Water FLow',
-      'gu': '',
-      'hi': '',
-    },
-    'hg40cr3s': {
-      'en': 'Minarals',
-      'gu': '',
-      'hi': '',
-    },
-    'a5h1epli': {
-      'en': 'Water Level',
-      'gu': '',
-      'hi': '',
-    },
-    'lg92ibsu': {
-      'en': 'Temperature ',
-      'gu': '',
-      'hi': '',
-    },
-    'zw4xnmwj': {
-      'en': 'Weather Information',
-      'gu': '',
-      'hi': '',
-    },
-    'cfa8vgrd': {
-      'en': 'Weather ',
-      'gu': '',
-      'hi': '',
-    },
-    '5arfr7dk': {
-      'en': 'Flood Risk',
-      'gu': '',
-      'hi': '',
-    },
-    'pq46lcqh': {
-      'en': '12%',
-      'gu': '',
-      'hi': '',
-    },
-    'u0xsk1xv': {
-      'en': 'Home',
-      'gu': '',
-      'hi': '',
-    },
-  },
   // Auth1
   {
     'uv4wi7s2': {
@@ -196,7 +133,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'gu': '',
       'hi': '',
     },
-    '3l5khidi': {
+    'j2qk0er1': {
       'en': 'Sign In',
       'gu': '',
       'hi': '',
@@ -264,13 +201,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // profile
   {
+    '1s0y2rmq': {
+      'en': 'Log Out',
+      'gu': '',
+      'hi': '',
+    },
     'v1ooe6yy': {
-      'en': 'Andrew D.',
+      'en': 'Rajdeep Barot',
       'gu': '',
       'hi': '',
     },
     'ksx9p1u3': {
-      'en': 'andrew@domainname.com',
+      'en': 'snnbarot23@gmail.com',
       'gu': '',
       'hi': '',
     },
@@ -289,6 +231,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'gu': '',
       'hi': '',
     },
+    '71eahuct': {
+      'en': 'Water Conservation Tips',
+      'gu': '',
+      'hi': '',
+    },
     '6gqj800m': {
       'en': 'App Settings',
       'gu': '',
@@ -301,11 +248,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'q4c5spqh': {
       'en': 'Terms of Service',
-      'gu': '',
-      'hi': '',
-    },
-    '1s0y2rmq': {
-      'en': 'Log Out',
       'gu': '',
       'hi': '',
     },
@@ -421,77 +363,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // community
   {
     '48gcyz5b': {
-      'en': 'NEWS',
+      'en': 'News',
       'gu': '',
       'hi': '',
     },
     '8r1kfzay': {
-      'en': 'COMMUNITY',
+      'en': 'Community',
       'gu': '',
       'hi': '',
     },
     'r3w6ry2c': {
-      'en': 'FORUMS',
+      'en': 'Forum',
       'gu': '',
       'hi': '',
     },
     'dtp8usnm': {
-      'en': 'GROUPS',
+      'en': 'Groups',
       'gu': '',
       'hi': '',
     },
-    'siy24osb': {
-      'en': 'Breaking News',
-      'gu': '',
-      'hi': '',
-    },
-    'y0mf45ac': {
-      'en':
-          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
-      'gu': '',
-      'hi': '',
-    },
-    'u86ub34l': {
-      'en': 'Breaking News',
-      'gu': '',
-      'hi': '',
-    },
-    '609kjm3c': {
-      'en':
-          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
-      'gu': '',
-      'hi': '',
-    },
-    'xxwhcqla': {
-      'en': 'Breaking News',
-      'gu': '',
-      'hi': '',
-    },
-    'cplsgswq': {
-      'en':
-          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
-      'gu': '',
-      'hi': '',
-    },
-    '0gc1jrpb': {
-      'en': 'Breaking News',
-      'gu': '',
-      'hi': '',
-    },
-    'adftxliy': {
-      'en':
-          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
-      'gu': '',
-      'hi': '',
-    },
-    'y0nfwpsx': {
-      'en': 'Breaking News',
-      'gu': '',
-      'hi': '',
-    },
-    '6h4ma2jr': {
-      'en':
-          'This is the desscription of the above news field of text csdgvuisfishciosdhcodhidsvhosvhdjvu.',
+    'lzoqodhs': {
+      'en': 'Some Of trending News are here :',
       'gu': '',
       'hi': '',
     },
@@ -501,65 +393,261 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': '',
     },
   },
-  // HomePageCopy
+  // HomePage
   {
-    'pdtbe4i7': {
-      'en': 'rivinsight',
+    'y207e01w': {
+      'en': 'Sabaramati River',
       'gu': '',
       'hi': '',
     },
-    '1fee4kkj': {
+    's9mhygz1': {
+      'en': 'Water Use',
+      'gu': '',
+      'hi': '',
+    },
+    'ep1r75y5': {
+      'en': 'Agri..Irrigation',
+      'gu': '',
+      'hi': '',
+    },
+    'uxrdm04v': {
+      'en': 'Water Flow and Availability',
+      'gu': '',
+      'hi': '',
+    },
+    'ap4fipkx': {
       'en': 'Water Quality',
       'gu': '',
       'hi': '',
     },
-    's69a1v4v': {
-      'en': 'Tab View 1',
+    'qcvfsjdc': {
+      'en': 'Soil Moisture Data',
       'gu': '',
       'hi': '',
     },
-    '3apn0q9i': {
-      'en': 'Example 2',
+    '25qzujml': {
+      'en': 'Crop Water Requiremen',
       'gu': '',
       'hi': '',
     },
-    'nin8r7o8': {
-      'en': 'Tab View 2',
+    '9sh3qid9': {
+      'en': 'Local Regulations and Water Rights',
       'gu': '',
       'hi': '',
     },
-    'l4sl3el5': {
-      'en': 'Example 3',
+    'bfd243w2': {
+      'en': 'Remote Sensing and GIS Data',
       'gu': '',
       'hi': '',
     },
-    'rcajrz1a': {
-      'en': 'Tab View 3',
+    'z06ld80g': {
+      'en': 'All',
       'gu': '',
       'hi': '',
     },
-    'p7rds43f': {
+    '2p38ce9f': {
+      'en': 'More',
+      'gu': '',
+      'hi': '',
+    },
+    'qixcrufc': {
       'en': 'Weather Information',
       'gu': '',
       'hi': '',
     },
-    'pzdcbupw': {
-      'en': 'Weather ',
-      'gu': '',
-      'hi': '',
-    },
-    'urn9jc74': {
+    '61p972pa': {
       'en': 'Flood Risk',
       'gu': '',
       'hi': '',
     },
-    'hvr6mswe': {
+    'zwsdnnqw': {
       'en': '12%',
+      'gu': '',
+      'hi': '',
+    },
+    'jndwnoso': {
+      'en': 'History',
+      'gu': '',
+      'hi': '',
+    },
+    'ok68adwq': {
+      'en': 'Gallery',
+      'gu': '',
+      'hi': '',
+    },
+    'm9uokg3n': {
+      'en': 'Tourism',
+      'gu': '',
+      'hi': '',
+    },
+    'vigjusgr': {
+      'en': 'More...',
       'gu': '',
       'hi': '',
     },
     'j4j13bx5': {
       'en': 'Home',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // newsfeed
+  {
+    'y3fpkpki': {
+      'en': 'List Item Title',
+      'gu': '',
+      'hi': '',
+    },
+    'nntyxa51': {
+      'en': 'Secondary text',
+      'gu': '',
+      'hi': '',
+    },
+    'iadwm424': {
+      'en': 'List Item Title',
+      'gu': '',
+      'hi': '',
+    },
+    'jpbseaog': {
+      'en': 'Secondary text',
+      'gu': '',
+      'hi': '',
+    },
+    'kgvpryl5': {
+      'en': 'List Item Title',
+      'gu': '',
+      'hi': '',
+    },
+    'hw7vx06m': {
+      'en': 'Secondary text',
+      'gu': '',
+      'hi': '',
+    },
+    'lc65fwcl': {
+      'en': 'List Item Title',
+      'gu': '',
+      'hi': '',
+    },
+    'u1itt6zj': {
+      'en': 'Secondary text',
+      'gu': '',
+      'hi': '',
+    },
+    '670ymebt': {
+      'en': 'Home',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // detailspage
+  {
+    'q7pdtke3': {
+      'en': 'Water Resource Management',
+      'gu': '',
+      'hi': '',
+    },
+    'v8nowfta': {
+      'en': 'Biodiversity Consrvation',
+      'gu': '',
+      'hi': '',
+    },
+    'y93wtdq9': {
+      'en': 'Navigation Safety',
+      'gu': '',
+      'hi': '',
+    },
+    '8cwb72lj': {
+      'en': 'Infrastructure Planning',
+      'gu': '',
+      'hi': '',
+    },
+    'z7itkzz9': {
+      'en': 'Agricultural Irrigation Management',
+      'gu': '',
+      'hi': '',
+    },
+    '5h73p39q': {
+      'en': 'Scientific Research Support',
+      'gu': '',
+      'hi': '',
+    },
+    'jjt200dt': {
+      'en': 'Land Use Guidance',
+      'gu': '',
+      'hi': '',
+    },
+    's2g3dbgh': {
+      'en': 'Climate Impact Monitoring',
+      'gu': '',
+      'hi': '',
+    },
+    'jv0idkkc': {
+      'en': 'Recreation and Tourism',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // photogallery
+  {
+    '4tst1nx1': {
+      'en': 'Gallery',
+      'gu': '',
+      'hi': '',
+    },
+    '5tj27qgo': {
+      'en': 'Home',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // news
+  {
+    'x7vfjai2': {
+      'en': 'BREAKING NEWS',
+      'gu': '',
+      'hi': '',
+    },
+    'tjz0jakw': {
+      'en':
+          'India\'s New Delhi blanketed by toxic haze, world\'s most polluted city again',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // historydetail
+  {
+    'yopjgo5l': {
+      'en': 'History Of River',
+      'gu': '',
+      'hi': '',
+    },
+    'igs7rxz3': {
+      'en':
+          'Rajashekhara\'s Kavya-mimamsa (10th century) calls the river Shvabhravati (IAST: Śvabhravatī). The 11th century text Shringara-manjari-katha calls it \"Sambhramavati\" (literally, \"full of fickleness\"). Jain Acharya Buddhisagarsuri has written many poems about the Sabarmati River. During India\'s independence struggle, Mahatma Gandhi established the Sabarmati Ashram as his home on the banks of this river. In 2018, an assessment by the Central Pollution Control Board (CPCB) named the Kheroj-Vautha stretch of the Sabarmati among the most polluted river stretches in India.',
+      'gu': '',
+      'hi': '',
+    },
+    'fg2h1dld': {
+      'en':
+          'Significance in Hinduism\nIn Rajasthan, it is believed that the Sabarmati River originated due to the penance of ascetic Kashyapa on Mount Abu. His penance had pleased Shiva and in return, Shiva gave ascetic Kashyapa the Ganges River. The Ganges River flowed from Shiva\'s hair onto Mount Abu and became the Sabarmati River. In another legend surrounding the origin of the river, Shiva brought the goddess Ganga to Gujarat and that caused the Sabarmati to come into being.',
+      'gu': '',
+      'hi': '',
+    },
+    'jzaevzy0': {
+      'en': 'Close',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // weatherinfo
+  {
+    'g3lk0ihn': {
+      'en': 'Weather Information',
+      'gu': '',
+      'hi': '',
+    },
+    'aq4uckf5': {
+      'en': 'Near Sabaramati River',
       'gu': '',
       'hi': '',
     },

@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/user/appbarnew/appbarnew_widget.dart';
+import '/user/news/news_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -26,6 +28,8 @@ class _CommunityWidgetState extends State<CommunityWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => CommunityModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -54,488 +58,263 @@ class _CommunityWidgetState extends State<CommunityWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: Column(
-          mainAxisSize: MainAxisSize.max,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        body: Stack(
           children: [
-            Container(
-              width: double.infinity,
-              height: 160.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).secondaryBackground,
-              ),
-              child: Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              '48gcyz5b' /* NEWS */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 150.0,
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                      child: Container(
+                        width: double.infinity,
+                        height: 135.0,
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              FlutterFlowTheme.of(context).primaryBackground,
+                              FlutterFlowTheme.of(context).secondaryBackground
+                            ],
+                            stops: [0.0, 1.0],
+                            begin: AlignmentDirectional(0.0, -1.0),
+                            end: AlignmentDirectional(0, 1.0),
                           ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              '8r1kfzay' /* COMMUNITY */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 150.0,
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
+                        ),
+                        child: Align(
+                          alignment: AlignmentDirectional(0.00, 0.00),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed('newsfeed');
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      '48gcyz5b' /* News */,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 150.0,
+                                      height: 40.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Color(0x756A9FC6),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                          ),
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    showLoadingIndicator: false,
                                   ),
-                              elevation: 3.0,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
+                                  FFButtonWidget(
+                                    onPressed: () {
+                                      print('Button pressed ...');
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      '8r1kfzay' /* Community */,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 150.0,
+                                      height: 40.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Color(0x646A9FC6),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                          ),
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    showLoadingIndicator: false,
+                                  ),
+                                ],
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  FFButtonWidget(
+                                    onPressed: () {
+                                      print('Button pressed ...');
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'r3w6ry2c' /* Forum */,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 150.0,
+                                      height: 40.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: FlutterFlowTheme.of(context)
+                                          .buttonColor,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                          ),
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                  ),
+                                  FFButtonWidget(
+                                    onPressed: () {
+                                      print('Button pressed ...');
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'dtp8usnm' /* Groups */,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 150.0,
+                                      height: 40.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: FlutterFlowTheme.of(context)
+                                          .buttonColor,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                          ),
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'r3w6ry2c' /* FORUMS */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 150.0,
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
+                    ),
+                    Flexible(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            20.0, 0.0, 0.0, 10.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'lzoqodhs' /* Some Of trending News are here... */,
                           ),
-                          FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'dtp8usnm' /* GROUPS */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 150.0,
-                              height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                          ),
-                        ],
+                          textAlign: TextAlign.start,
+                          style: FlutterFlowTheme.of(context).bodyLarge,
+                        ),
                       ),
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                      child: Container(
+                        width: double.infinity,
+                        height: 547.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                        ),
+                        child: ListView(
+                          padding: EdgeInsets.zero,
+                          shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          children: [
+                            wrapWithModel(
+                              model: _model.newsModel1,
+                              updateCallback: () => setState(() {}),
+                              child: NewsWidget(),
+                            ),
+                            wrapWithModel(
+                              model: _model.newsModel2,
+                              updateCallback: () => setState(() {}),
+                              child: NewsWidget(),
+                            ),
+                            wrapWithModel(
+                              model: _model.newsModel3,
+                              updateCallback: () => setState(() {}),
+                              child: NewsWidget(),
+                            ),
+                            wrapWithModel(
+                              model: _model.newsModel4,
+                              updateCallback: () => setState(() {}),
+                              child: NewsWidget(),
+                            ),
+                            wrapWithModel(
+                              model: _model.newsModel5,
+                              updateCallback: () => setState(() {}),
+                              child: NewsWidget(),
+                            ),
+                            wrapWithModel(
+                              model: _model.newsModel6,
+                              updateCallback: () => setState(() {}),
+                              child: NewsWidget(),
+                            ),
+                            wrapWithModel(
+                              model: _model.newsModel7,
+                              updateCallback: () => setState(() {}),
+                              child: NewsWidget(),
+                            ),
+                            wrapWithModel(
+                              model: _model.newsModel8,
+                              updateCallback: () => setState(() {}),
+                              child: NewsWidget(),
+                            ),
+                          ].divide(SizedBox(height: 1.0)),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 25.0, 10.0, 0.0),
-              child: Container(
-                width: double.infinity,
-                height: 547.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  scrollDirection: Axis.vertical,
-                  children: [
-                    Container(
-                      width: 0.0,
-                      height: 111.0,
-                      decoration: BoxDecoration(
-                        color: Color(0x7FC6D3DF),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: Align(
-                        alignment: AlignmentDirectional(0.00, 1.00),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 25.0, 0.0, 25.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/951/600',
-                                  width: 84.0,
-                                  height: 161.0,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Flexible(
-                              flex: 2,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'siy24osb' /* Breaking News */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 20.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'y0mf45ac' /* This is the desscription of th... */,
-                                      ),
-                                      textAlign: TextAlign.start,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 0.0,
-                      height: 111.0,
-                      decoration: BoxDecoration(
-                        color: Color(0x7FC6D3DF),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: Align(
-                        alignment: AlignmentDirectional(0.00, 1.00),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 25.0, 0.0, 25.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/951/600',
-                                  width: 84.0,
-                                  height: 161.0,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Flexible(
-                              flex: 2,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'u86ub34l' /* Breaking News */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 20.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '609kjm3c' /* This is the desscription of th... */,
-                                      ),
-                                      textAlign: TextAlign.start,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 0.0,
-                      height: 111.0,
-                      decoration: BoxDecoration(
-                        color: Color(0x7FC6D3DF),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: Align(
-                        alignment: AlignmentDirectional(0.00, 1.00),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 25.0, 0.0, 25.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/951/600',
-                                  width: 84.0,
-                                  height: 161.0,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Flexible(
-                              flex: 2,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'xxwhcqla' /* Breaking News */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 20.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'cplsgswq' /* This is the desscription of th... */,
-                                      ),
-                                      textAlign: TextAlign.start,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 0.0,
-                      height: 111.0,
-                      decoration: BoxDecoration(
-                        color: Color(0x7FC6D3DF),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: Align(
-                        alignment: AlignmentDirectional(0.00, 1.00),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 25.0, 0.0, 25.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/951/600',
-                                  width: 84.0,
-                                  height: 161.0,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Flexible(
-                              flex: 2,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '0gc1jrpb' /* Breaking News */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 20.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'adftxliy' /* This is the desscription of th... */,
-                                      ),
-                                      textAlign: TextAlign.start,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 0.0,
-                      height: 111.0,
-                      decoration: BoxDecoration(
-                        color: Color(0x7FC6D3DF),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: Align(
-                        alignment: AlignmentDirectional(0.00, 1.00),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 25.0, 0.0, 25.0),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/951/600',
-                                  width: 84.0,
-                                  height: 161.0,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Flexible(
-                              flex: 2,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'y0nfwpsx' /* Breaking News */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 20.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '6h4ma2jr' /* This is the desscription of th... */,
-                                      ),
-                                      textAlign: TextAlign.start,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ].divide(SizedBox(height: 10.0)),
-                ),
-              ),
+            wrapWithModel(
+              model: _model.appbarnewModel,
+              updateCallback: () => setState(() {}),
+              child: AppbarnewWidget(),
             ),
           ],
         ),
