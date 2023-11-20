@@ -5,8 +5,8 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
+import '/backend/supabase/supabase.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
@@ -80,22 +80,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : Auth1Widget(),
+          appStateNotifier.loggedIn ? NavBarPage() : AuthPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : Auth1Widget(),
-        ),
-        FFRoute(
-          name: 'Auth1',
-          path: '/auth1',
-          builder: (context, params) => Auth1Widget(),
+              appStateNotifier.loggedIn ? NavBarPage() : AuthPageWidget(),
         ),
         FFRoute(
           name: 'profile',
           path: '/profile',
+          requireAuth: true,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'profile')
               : ProfileWidget(),
@@ -103,6 +99,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'explore',
           path: '/explore',
+          requireAuth: true,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'explore')
               : ExploreWidget(),
@@ -110,6 +107,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'community',
           path: '/community',
+          requireAuth: true,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'community')
               : CommunityWidget(),
@@ -117,6 +115,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
+          requireAuth: true,
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'HomePage')
               : HomePageWidget(),
@@ -124,6 +123,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'newsfeed',
           path: '/newsfeed',
+          requireAuth: true,
           builder: (context, params) => NavBarPage(
             initialPage: '',
             page: NewsfeedWidget(),
@@ -132,6 +132,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'detailspage',
           path: '/detailspage',
+          requireAuth: true,
           builder: (context, params) => NavBarPage(
             initialPage: '',
             page: DetailspageWidget(),
@@ -140,10 +141,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'photogallery',
           path: '/photogallery',
+          requireAuth: true,
           builder: (context, params) => NavBarPage(
             initialPage: '',
             page: PhotogalleryWidget(),
           ),
+        ),
+        FFRoute(
+          name: 'AuthPage',
+          path: '/AuthPage',
+          builder: (context, params) => AuthPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -262,7 +269,6 @@ class FFParameters {
     String paramName,
     ParamType type, [
     bool isList = false,
-    List<String>? collectionNamePath,
   ]) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -276,8 +282,11 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(param, type, isList,
-        collectionNamePath: collectionNamePath);
+    return deserializeParam<T>(
+      param,
+      type,
+      isList,
+    );
   }
 }
 
@@ -310,7 +319,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/auth1';
+            return '/AuthPage';
           }
           return null;
         },
@@ -324,12 +333,13 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.transparent,
+                  color: Colors.white,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/ezgif-4-61e44ae614.gif',
+                      'assets/images/LOGO_LAUNCHER_(1).gif',
                       width: double.infinity,
-                      fit: BoxFit.cover,
+                      height: double.infinity,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 )

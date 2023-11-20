@@ -106,113 +106,10 @@ Locale createLocale(String language) => language.contains('_')
     : Locale(language);
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // Auth1
-  {
-    'uv4wi7s2': {
-      'en': 'Sign In',
-      'gu': '',
-      'hi': '',
-    },
-    'yprtkq3o': {
-      'en': 'Sign Up',
-      'gu': '',
-      'hi': '',
-    },
-    'nl7f7sp3': {
-      'en': 'Let\'s get started by filling out the form below.',
-      'gu': '',
-      'hi': '',
-    },
-    'hgfukbsn': {
-      'en': 'Email',
-      'gu': '',
-      'hi': '',
-    },
-    'xp6hco6f': {
-      'en': 'Password',
-      'gu': '',
-      'hi': '',
-    },
-    'j2qk0er1': {
-      'en': 'Sign In',
-      'gu': '',
-      'hi': '',
-    },
-    'u7kafb0o': {
-      'en': 'Forgot Password',
-      'gu': '',
-      'hi': '',
-    },
-    'ktm2sgg8': {
-      'en': 'Or sign up with',
-      'gu': '',
-      'hi': '',
-    },
-    'yv6uxdlh': {
-      'en': 'Continue with Google',
-      'gu': '',
-      'hi': '',
-    },
-    'dtup9035': {
-      'en': 'Continue with Apple',
-      'gu': '',
-      'hi': '',
-    },
-    'n89h5qw8': {
-      'en': 'Email',
-      'gu': '',
-      'hi': '',
-    },
-    'suyzgv60': {
-      'en': 'Password',
-      'gu': '',
-      'hi': '',
-    },
-    'ip9holjf': {
-      'en': 'Confirm Password',
-      'gu': '',
-      'hi': '',
-    },
-    'allrkeef': {
-      'en': 'Create Account',
-      'gu': '',
-      'hi': '',
-    },
-    'hltbh0hc': {
-      'en': 'Or sign up with',
-      'gu': '',
-      'hi': '',
-    },
-    'jdy20o18': {
-      'en': 'Continue with Google',
-      'gu': '',
-      'hi': '',
-    },
-    'w1fy4kc3': {
-      'en': 'Continue with Apple',
-      'gu': '',
-      'hi': '',
-    },
-    '4ybsfs6l': {
-      'en': 'Home',
-      'gu': '',
-      'hi': '',
-    },
-  },
   // profile
   {
     '1s0y2rmq': {
       'en': 'Log Out',
-      'gu': '',
-      'hi': '',
-    },
-    'v1ooe6yy': {
-      'en': 'Rajdeep Barot',
-      'gu': '',
-      'hi': '',
-    },
-    'ksx9p1u3': {
-      'en': 'snnbarot23@gmail.com',
       'gu': '',
       'hi': '',
     },
@@ -395,58 +292,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HomePage
   {
-    'y207e01w': {
+    'k2fso2x1': {
+      'en': 'About',
+      'gu': '',
+      'hi': '',
+    },
+    'vez6nxqd': {
       'en': 'Sabaramati River',
       'gu': '',
       'hi': '',
     },
-    's9mhygz1': {
-      'en': 'Water Use',
+    'g083yp3t': {
+      'en': 'History',
       'gu': '',
       'hi': '',
     },
-    'ep1r75y5': {
-      'en': 'Agri..Irrigation',
-      'gu': '',
-      'hi': '',
-    },
-    'uxrdm04v': {
-      'en': 'Water Flow and Availability',
-      'gu': '',
-      'hi': '',
-    },
-    'ap4fipkx': {
-      'en': 'Water Quality',
-      'gu': '',
-      'hi': '',
-    },
-    'qcvfsjdc': {
-      'en': 'Soil Moisture Data',
-      'gu': '',
-      'hi': '',
-    },
-    '25qzujml': {
-      'en': 'Crop Water Requiremen',
-      'gu': '',
-      'hi': '',
-    },
-    '9sh3qid9': {
-      'en': 'Local Regulations and Water Rights',
-      'gu': '',
-      'hi': '',
-    },
-    'bfd243w2': {
-      'en': 'Remote Sensing and GIS Data',
-      'gu': '',
-      'hi': '',
-    },
-    'z06ld80g': {
-      'en': 'All',
-      'gu': '',
-      'hi': '',
-    },
-    '2p38ce9f': {
-      'en': 'More',
+    'pxs700yk': {
+      'en': 'Gallery',
       'gu': '',
       'hi': '',
     },
@@ -462,26 +324,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'zwsdnnqw': {
       'en': '12%',
-      'gu': '',
-      'hi': '',
-    },
-    'jndwnoso': {
-      'en': 'History',
-      'gu': '',
-      'hi': '',
-    },
-    'ok68adwq': {
-      'en': 'Gallery',
-      'gu': '',
-      'hi': '',
-    },
-    'm9uokg3n': {
-      'en': 'Tourism',
-      'gu': '',
-      'hi': '',
-    },
-    'vigjusgr': {
-      'en': 'More...',
       'gu': '',
       'hi': '',
     },
@@ -595,6 +437,74 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': '',
     },
     '5tj27qgo': {
+      'en': 'Home',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // AuthPage
+  {
+    'a1f7pxqd': {
+      'en': 'Sign In',
+      'gu': '',
+      'hi': '',
+    },
+    'ico5bypf': {
+      'en': 'Email',
+      'gu': '',
+      'hi': '',
+    },
+    '7nnwutqv': {
+      'en': 'Password',
+      'gu': '',
+      'hi': '',
+    },
+    'akttre34': {
+      'en': 'Sign In',
+      'gu': '',
+      'hi': '',
+    },
+    '6i5q0rhl': {
+      'en': 'Forgot Password',
+      'gu': '',
+      'hi': '',
+    },
+    'bo2hiksw': {
+      'en': 'Or sign up with',
+      'gu': '',
+      'hi': '',
+    },
+    'id912ne2': {
+      'en': 'Continue with Google',
+      'gu': '',
+      'hi': '',
+    },
+    'i98cknw8': {
+      'en': 'Sign Up',
+      'gu': '',
+      'hi': '',
+    },
+    'hdxy2rb3': {
+      'en': 'Email',
+      'gu': '',
+      'hi': '',
+    },
+    'dpjic4e6': {
+      'en': 'Password',
+      'gu': '',
+      'hi': '',
+    },
+    'q5fnq4bl': {
+      'en': 'Confirm Password',
+      'gu': '',
+      'hi': '',
+    },
+    '6hlmsg63': {
+      'en': 'Create Account',
+      'gu': '',
+      'hi': '',
+    },
+    'xdwl8v6z': {
       'en': 'Home',
       'gu': '',
       'hi': '',

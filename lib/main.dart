@@ -1,14 +1,13 @@
-import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'auth/firebase_auth/firebase_user_provider.dart';
-import 'auth/firebase_auth/auth_util.dart';
 
-import 'backend/firebase/firebase_config.dart';
+import 'auth/supabase_auth/supabase_user_provider.dart';
+import 'auth/supabase_auth/auth_util.dart';
+
+import '/backend/supabase/supabase.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
@@ -22,15 +21,10 @@ import 'index.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
-  await initFirebase();
 
-  final appState = FFAppState(); // Initialize FFAppState
-  await appState.initializePersistedState();
+  await SupaFlow.initialize();
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => appState,
-    child: MyApp(),
-  ));
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -51,28 +45,19 @@ class _MyAppState extends State<MyApp> {
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
 
-  final authUserSub = authenticatedUserStream.listen((_) {});
-
   @override
   void initState() {
     super.initState();
 
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
-    userStream = rivinsightFirebaseUserStream()
+    userStream = rivinsightSupabaseUserStream()
       ..listen((user) => _appStateNotifier.update(user));
     jwtTokenStream.listen((_) {});
     Future.delayed(
-      Duration(milliseconds: 2000),
+      Duration(milliseconds: 4140),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
-  }
-
-  @override
-  void dispose() {
-    authUserSub.cancel();
-
-    super.dispose();
   }
 
   void setLocale(String language) {
@@ -102,19 +87,19 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: ScrollbarThemeData(
-          thumbVisibility: MaterialStateProperty.all(true),
+          thumbVisibility: MaterialStateProperty.all(false),
           trackVisibility: MaterialStateProperty.all(false),
           interactive: true,
-          thickness: MaterialStateProperty.all(10.0),
+          thickness: MaterialStateProperty.all(8.0),
           radius: Radius.circular(10.0),
           thumbColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.dragged)) {
               return Color(4293256677);
             }
             if (states.contains(MaterialState.hovered)) {
-              return Color(4278336098);
+              return Color(1500159942);
             }
-            return Color(4278336098);
+            return Color(2248292962);
           }),
           minThumbLength: 20.0,
           crossAxisMargin: 0.0,
@@ -176,7 +161,7 @@ class _NavBarPageState extends State<NavBarPage> {
         }),
         backgroundColor: Colors.white,
         selectedItemColor: FlutterFlowTheme.of(context).primary,
-        unselectedItemColor: Colors.black,
+        unselectedItemColor: FlutterFlowTheme.of(context).unselectIcon,
         selectedBackgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         borderRadius: 8.0,
         itemBorderRadius: 8.0,
@@ -193,7 +178,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   FontAwesomeIcons.home,
                   color: currentIndex == 0
                       ? FlutterFlowTheme.of(context).primary
-                      : Colors.black,
+                      : FlutterFlowTheme.of(context).unselectIcon,
                   size: 24.0,
                 ),
                 Text(
@@ -204,7 +189,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 0
                         ? FlutterFlowTheme.of(context).primary
-                        : Colors.black,
+                        : FlutterFlowTheme.of(context).unselectIcon,
                     fontSize: 11.0,
                   ),
                 ),
@@ -219,7 +204,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   Icons.explore_sharp,
                   color: currentIndex == 1
                       ? FlutterFlowTheme.of(context).primary
-                      : Colors.black,
+                      : FlutterFlowTheme.of(context).unselectIcon,
                   size: 27.0,
                 ),
                 Text(
@@ -230,7 +215,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 1
                         ? FlutterFlowTheme.of(context).primary
-                        : Colors.black,
+                        : FlutterFlowTheme.of(context).unselectIcon,
                     fontSize: 11.0,
                   ),
                 ),
@@ -245,7 +230,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   FontAwesomeIcons.solidCommentDots,
                   color: currentIndex == 2
                       ? FlutterFlowTheme.of(context).primary
-                      : Colors.black,
+                      : FlutterFlowTheme.of(context).unselectIcon,
                   size: 24.0,
                 ),
                 Text(
@@ -256,7 +241,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 2
                         ? FlutterFlowTheme.of(context).primary
-                        : Colors.black,
+                        : FlutterFlowTheme.of(context).unselectIcon,
                     fontSize: 11.0,
                   ),
                 ),
@@ -271,7 +256,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   Icons.account_circle_rounded,
                   color: currentIndex == 3
                       ? FlutterFlowTheme.of(context).primary
-                      : Colors.black,
+                      : FlutterFlowTheme.of(context).unselectIcon,
                   size: 30.0,
                 ),
                 Text(
@@ -282,7 +267,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 3
                         ? FlutterFlowTheme.of(context).primary
-                        : Colors.black,
+                        : FlutterFlowTheme.of(context).unselectIcon,
                     fontSize: 11.0,
                   ),
                 ),

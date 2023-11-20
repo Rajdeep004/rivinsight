@@ -30,8 +30,6 @@ class _DetailspageWidgetState extends State<DetailspageWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => DetailspageModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -51,8 +49,6 @@ class _DetailspageWidgetState extends State<DetailspageWidget>
         ),
       );
     }
-
-    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus

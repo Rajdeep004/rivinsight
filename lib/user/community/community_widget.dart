@@ -28,8 +28,6 @@ class _CommunityWidgetState extends State<CommunityWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => CommunityModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -49,8 +47,6 @@ class _CommunityWidgetState extends State<CommunityWidget> {
         ),
       );
     }
-
-    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus

@@ -37,7 +37,6 @@ class _ExploreWidgetState extends State<ExploreWidget>
       length: 2,
       initialIndex: 0,
     )..addListener(() => setState(() {}));
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -57,8 +56,6 @@ class _ExploreWidgetState extends State<ExploreWidget>
         ),
       );
     }
-
-    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus

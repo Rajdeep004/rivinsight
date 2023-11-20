@@ -30,8 +30,6 @@ class _WeatherinfoWidgetState extends State<WeatherinfoWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => WeatherinfoModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -43,8 +41,6 @@ class _WeatherinfoWidgetState extends State<WeatherinfoWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return ClipRRect(
       borderRadius: BorderRadius.circular(0.0),
       child: BackdropFilter(

@@ -36,6 +36,7 @@ abstract class FlutterFlowTheme {
   late Color newsColor;
   late Color primaryBtnText;
   late Color lineColor;
+  late Color unselectIcon;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -129,6 +130,7 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color newsColor = Color(0xCDEBF1F4);
   late Color primaryBtnText = Color(0xFFFFFFFF);
   late Color lineColor = Color(0xFFE0E3E7);
+  late Color unselectIcon = Color(0xFF3C3C3C);
 }
 
 abstract class Typography {

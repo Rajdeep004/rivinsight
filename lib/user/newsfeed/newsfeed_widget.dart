@@ -52,8 +52,6 @@ class _NewsfeedWidgetState extends State<NewsfeedWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => NewsfeedModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -73,8 +71,6 @@ class _NewsfeedWidgetState extends State<NewsfeedWidget>
         ),
       );
     }
-
-    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus

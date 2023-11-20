@@ -26,8 +26,6 @@ class _PhotogalleryWidgetState extends State<PhotogalleryWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PhotogalleryModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -47,8 +45,6 @@ class _PhotogalleryWidgetState extends State<PhotogalleryWidget> {
         ),
       );
     }
-
-    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus

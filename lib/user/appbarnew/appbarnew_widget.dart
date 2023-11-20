@@ -28,8 +28,6 @@ class _AppbarnewWidgetState extends State<AppbarnewWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AppbarnewModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -41,8 +39,6 @@ class _AppbarnewWidgetState extends State<AppbarnewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Material(
       color: Colors.transparent,
       elevation: 2.0,
@@ -54,43 +50,50 @@ class _AppbarnewWidgetState extends State<AppbarnewWidget> {
           topRight: Radius.circular(0.0),
         ),
       ),
-      child: Container(
-        width: double.infinity,
-        height: 62.0,
-        constraints: BoxConstraints(
-          minWidth: double.infinity,
-          maxWidth: double.infinity,
+      child: ClipRRect(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(50.0),
+          bottomRight: Radius.circular(50.0),
+          topLeft: Radius.circular(0.0),
+          topRight: Radius.circular(0.0),
         ),
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 2.0,
-              color: Color(0x33000000),
-              offset: Offset(0.0, 1.0),
-            )
-          ],
-          gradient: LinearGradient(
-            colors: [Color(0xFFC5E7FF), Colors.white],
-            stops: [0.0, 1.0],
-            begin: AlignmentDirectional(0.0, -1.0),
-            end: AlignmentDirectional(0, 1.0),
+        child: Container(
+          width: double.infinity,
+          height: 62.0,
+          constraints: BoxConstraints(
+            minWidth: double.infinity,
+            maxWidth: double.infinity,
           ),
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(50.0),
-            bottomRight: Radius.circular(50.0),
-            topLeft: Radius.circular(0.0),
-            topRight: Radius.circular(0.0),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 4.0,
+                color: Color(0x33000000),
+                offset: Offset(0.0, 2.0),
+              )
+            ],
+            gradient: LinearGradient(
+              colors: [Color(0xFFC5E7FF), Colors.white],
+              stops: [0.0, 1.0],
+              begin: AlignmentDirectional(0.0, -1.0),
+              end: AlignmentDirectional(0, 1.0),
+            ),
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(50.0),
+              bottomRight: Radius.circular(50.0),
+              topLeft: Radius.circular(0.0),
+              topRight: Radius.circular(0.0),
+            ),
+            border: Border.all(
+              color: FlutterFlowTheme.of(context).primary,
+            ),
           ),
-          border: Border.all(
-            color: FlutterFlowTheme.of(context).primary,
+          child: Image.asset(
+            'assets/images/New_Project_(9).png',
+            width: 50.0,
+            height: 20.0,
+            fit: BoxFit.contain,
           ),
-        ),
-        child: Image.asset(
-          'assets/images/New_Project_(9).png',
-          width: 50.0,
-          height: 20.0,
-          fit: BoxFit.contain,
-          alignment: Alignment(0.00, 0.00),
         ),
       ),
     );
