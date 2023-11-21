@@ -491,6 +491,8 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                         focusNode: _model.nameFocusNode,
                                         autofocus: true,
                                         autofillHints: [AutofillHints.name],
+                                        textCapitalization:
+                                            TextCapitalization.none,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelText: FFLocalizations.of(context)

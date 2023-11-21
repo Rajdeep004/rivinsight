@@ -89,20 +89,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? NavBarPage() : AuthPageWidget(),
         ),
         FFRoute(
-          name: 'profile',
-          path: '/profile',
+          name: 'ProfilePage',
+          path: '/profilePage',
           requireAuth: true,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'profile')
-              : ProfileWidget(),
+              ? NavBarPage(initialPage: 'ProfilePage')
+              : ProfilePageWidget(),
         ),
         FFRoute(
-          name: 'explore',
-          path: '/explore',
+          name: 'ExplorePage',
+          path: '/explorePage',
           requireAuth: true,
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'explore')
-              : ExploreWidget(),
+              ? NavBarPage(initialPage: 'ExplorePage')
+              : ExplorePageWidget(),
         ),
         FFRoute(
           name: 'community',
@@ -121,36 +121,61 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : HomePageWidget(),
         ),
         FFRoute(
-          name: 'newsfeed',
-          path: '/newsfeed',
+          name: 'DetailedView',
+          path: '/detailedView',
           requireAuth: true,
           builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: NewsfeedWidget(),
+            page: DetailedViewWidget(),
           ),
         ),
         FFRoute(
-          name: 'detailspage',
-          path: '/detailspage',
+          name: 'PhotoGallery',
+          path: '/photoGallery',
           requireAuth: true,
           builder: (context, params) => NavBarPage(
             initialPage: '',
-            page: DetailspageWidget(),
-          ),
-        ),
-        FFRoute(
-          name: 'photogallery',
-          path: '/photogallery',
-          requireAuth: true,
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: PhotogalleryWidget(),
+            page: PhotoGalleryWidget(),
           ),
         ),
         FFRoute(
           name: 'AuthPage',
           path: '/AuthPage',
           builder: (context, params) => AuthPageWidget(),
+        ),
+        FFRoute(
+          name: 'HistoryDetails',
+          path: '/historyDetails',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: HistoryDetailsWidget(),
+          ),
+        ),
+        FFRoute(
+          name: 'MoreInfo',
+          path: '/moreInfo',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: MoreInfoWidget(),
+          ),
+        ),
+        FFRoute(
+          name: 'NewsFeed',
+          path: '/newsFeed',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'NewsFeed')
+              : NavBarPage(
+                  initialPage: 'NewsFeed',
+                  page: NewsFeedWidget(),
+                ),
+        ),
+        FFRoute(
+          name: 'WaterTips',
+          path: '/waterTips',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: WaterTipsWidget(),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -336,10 +361,9 @@ class FFRoute {
                   color: Colors.white,
                   child: Center(
                     child: Image.asset(
-                      'assets/images/LOGO_LAUNCHER_(1).gif',
+                      'assets/images/final_logo_animation_(1).gif',
                       width: double.infinity,
-                      height: double.infinity,
-                      fit: BoxFit.contain,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 )

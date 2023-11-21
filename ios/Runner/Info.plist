@@ -50,7 +50,7 @@
 
 
 	<key>PermissionGroupNotification</key>
-    <string>Allow Us To Notofy You About Emergency </string>
+    <string>Allow Us To Notify You About Emergency </string>
 
 
 	<key>UILaunchStoryboardName</key>

@@ -1,7 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbarnew/appbarnew_widget.dart';
+import '/user/appbar/appbar_widget.dart';
 import '/user/news/news_widget.dart';
 import 'community_widget.dart' show CommunityWidget;
 import 'package:flutter/material.dart';
@@ -31,8 +31,8 @@ class CommunityModel extends FlutterFlowModel<CommunityWidget> {
   late NewsModel newsModel7;
   // Model for news component.
   late NewsModel newsModel8;
-  // Model for appbarnew component.
-  late AppbarnewModel appbarnewModel;
+  // Model for APPBAR component.
+  late AppbarModel appbarModel;
 
   /// Initialization and disposal methods.
 
@@ -45,7 +45,7 @@ class CommunityModel extends FlutterFlowModel<CommunityWidget> {
     newsModel6 = createModel(context, () => NewsModel());
     newsModel7 = createModel(context, () => NewsModel());
     newsModel8 = createModel(context, () => NewsModel());
-    appbarnewModel = createModel(context, () => AppbarnewModel());
+    appbarModel = createModel(context, () => AppbarModel());
   }
 
   void dispose() {
@@ -58,7 +58,7 @@ class CommunityModel extends FlutterFlowModel<CommunityWidget> {
     newsModel6.dispose();
     newsModel7.dispose();
     newsModel8.dispose();
-    appbarnewModel.dispose();
+    appbarModel.dispose();
   }
 
   /// Action blocks are added here.

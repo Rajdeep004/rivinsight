@@ -1,7 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbarnew/appbarnew_widget.dart';
+import '/user/appbar/appbar_widget.dart';
 import '/user/news/news_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -95,10 +95,14 @@ class _CommunityWidgetState extends State<CommunityWidget> {
                                 children: [
                                   FFButtonWidget(
                                     onPressed: () async {
-                                      context.pushNamed('newsfeed');
+                                      context.pushNamed('NewsFeed');
                                     },
                                     text: FFLocalizations.of(context).getText(
                                       '48gcyz5b' /* News */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_right_rounded,
+                                      size: 15.0,
                                     ),
                                     options: FFButtonOptions(
                                       width: 150.0,
@@ -108,7 +112,8 @@ class _CommunityWidgetState extends State<CommunityWidget> {
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0x756A9FC6),
+                                      color: FlutterFlowTheme.of(context)
+                                          .newsColor,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -130,6 +135,10 @@ class _CommunityWidgetState extends State<CommunityWidget> {
                                     },
                                     text: FFLocalizations.of(context).getText(
                                       '8r1kfzay' /* Community */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_right_rounded,
+                                      size: 15.0,
                                     ),
                                     options: FFButtonOptions(
                                       width: 150.0,
@@ -308,9 +317,9 @@ class _CommunityWidgetState extends State<CommunityWidget> {
               ),
             ),
             wrapWithModel(
-              model: _model.appbarnewModel,
+              model: _model.appbarModel,
               updateCallback: () => setState(() {}),
-              child: AppbarnewWidget(),
+              child: AppbarWidget(),
             ),
           ],
         ),

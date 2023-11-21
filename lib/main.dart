@@ -1,3 +1,5 @@
+import '/custom_code/actions/index.dart' as actions;
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +24,13 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
 
+  // Start initial custom actions code
+  await actions.onesignal();
+  // End initial custom actions code
+
   await SupaFlow.initialize();
+
+  await FFLocalizations.initialize();
 
   runApp(MyApp());
 }
@@ -37,7 +45,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale;
+  Locale? _locale = FFLocalizations.getStoredLocale();
   ThemeMode _themeMode = ThemeMode.system;
 
   late Stream<BaseAuthUser> userStream;
@@ -55,13 +63,14 @@ class _MyAppState extends State<MyApp> {
       ..listen((user) => _appStateNotifier.update(user));
     jwtTokenStream.listen((_) {});
     Future.delayed(
-      Duration(milliseconds: 4140),
+      Duration(milliseconds: 4500),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
   }
 
   void setLocale(String language) {
     setState(() => _locale = createLocale(language));
+    FFLocalizations.storeLocale(language);
   }
 
   void setThemeMode(ThemeMode mode) => setState(() {
@@ -89,7 +98,7 @@ class _MyAppState extends State<MyApp> {
         scrollbarTheme: ScrollbarThemeData(
           thumbVisibility: MaterialStateProperty.all(false),
           trackVisibility: MaterialStateProperty.all(false),
-          interactive: true,
+          interactive: false,
           thickness: MaterialStateProperty.all(8.0),
           radius: Radius.circular(10.0),
           thumbColor: MaterialStateProperty.resolveWith((states) {
@@ -138,9 +147,10 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'HomePage': HomePageWidget(),
-      'explore': ExploreWidget(),
+      'ExplorePage': ExplorePageWidget(),
       'community': CommunityWidget(),
-      'profile': ProfileWidget(),
+      'NewsFeed': NewsFeedWidget(),
+      'ProfilePage': ProfilePageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -253,8 +263,34 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.account_circle_rounded,
+                  Icons.newspaper_sharp,
                   color: currentIndex == 3
+                      ? FlutterFlowTheme.of(context).primary
+                      : FlutterFlowTheme.of(context).unselectIcon,
+                  size: 24.0,
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'c20q1otz' /* News */,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 3
+                        ? FlutterFlowTheme.of(context).primary
+                        : FlutterFlowTheme.of(context).unselectIcon,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.account_circle_rounded,
+                  color: currentIndex == 4
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).unselectIcon,
                   size: 30.0,
@@ -265,7 +301,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: currentIndex == 3
+                    color: currentIndex == 4
                         ? FlutterFlowTheme.of(context).primary
                         : FlutterFlowTheme.of(context).unselectIcon,
                     fontSize: 11.0,
