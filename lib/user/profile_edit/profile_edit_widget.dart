@@ -60,7 +60,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
       child: Align(
         alignment: AlignmentDirectional(0.00, 0.00),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 350.0, 0.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 250.0, 0.0, 0.0),
           child: InkWell(
             splashColor: Colors.transparent,
             focusColor: Colors.transparent,

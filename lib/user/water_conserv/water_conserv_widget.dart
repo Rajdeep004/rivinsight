@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 import 'water_conserv_model.dart';
 export 'water_conserv_model.dart';
@@ -55,7 +56,7 @@ class _WaterConservWidgetState extends State<WaterConservWidget> {
           padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
           child: Container(
             width: double.infinity,
-            height: 364.0,
+            height: 358.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).newsColor,
               borderRadius: BorderRadius.circular(10.0),

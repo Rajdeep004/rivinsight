@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/user/appbar/appbar_widget.dart';
 import '/user/weatherinfo/weatherinfo_widget.dart';
 import '/flutter_flow/permissions_util.dart';
+import 'dart:async';
 import 'home_page_widget.dart' show HomePageWidget;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  Completer<List<RiversRow>>? requestCompleter;
   // Model for APPBAR component.
   late AppbarModel appbarModel;
 
@@ -39,4 +41,19 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   /// Action blocks are added here.
 
   /// Additional helper methods are added here.
+
+  Future waitForRequestCompleted({
+    double minWait = 0,
+    double maxWait = double.infinity,
+  }) async {
+    final stopwatch = Stopwatch()..start();
+    while (true) {
+      await Future.delayed(Duration(milliseconds: 50));
+      final timeElapsed = stopwatch.elapsedMilliseconds;
+      final requestComplete = requestCompleter?.isCompleted ?? false;
+      if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {
+        break;
+      }
+    }
+  }
 }

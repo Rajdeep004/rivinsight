@@ -208,6 +208,8 @@ dynamic deserializeParam<T>(
             return WCtipsRow(data);
           case NotificationsRow:
             return NotificationsRow(data);
+          case GalleryRow:
+            return GalleryRow(data);
           case UsersRow:
             return UsersRow(data);
           case RiversRow:

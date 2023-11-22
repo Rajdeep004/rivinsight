@@ -103,7 +103,7 @@ class _WaterTipsWidgetState extends State<WaterTipsWidget>
               ),
               child: FutureBuilder<List<WCtipsRow>>(
                 future: WCtipsTable().queryRows(
-                  queryFn: (q) => q,
+                  queryFn: (q) => q.order('id', ascending: true),
                 ),
                 builder: (context, snapshot) {
                   // Customize what your widget looks like when it's loading.
@@ -112,7 +112,7 @@ class _WaterTipsWidgetState extends State<WaterTipsWidget>
                       child: SizedBox(
                         width: 50.0,
                         height: 50.0,
-                        child: SpinKitCircle(
+                        child: SpinKitRipple(
                           color: FlutterFlowTheme.of(context).primary,
                           size: 50.0,
                         ),
@@ -142,7 +142,7 @@ class _WaterTipsWidgetState extends State<WaterTipsWidget>
                             ),
                             content: listViewWCtipsRow.content!,
                             image: listViewWCtipsRow.image!,
-                            id: listViewIndex,
+                            id: listViewWCtipsRow.id,
                           ),
                         ),
                       );

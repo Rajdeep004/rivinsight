@@ -105,14 +105,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : ExplorePageWidget(),
         ),
         FFRoute(
-          name: 'community',
-          path: '/community',
-          requireAuth: true,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'community')
-              : CommunityWidget(),
-        ),
-        FFRoute(
           name: 'HomePage',
           path: '/homePage',
           requireAuth: true,
@@ -176,6 +168,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             initialPage: '',
             page: WaterTipsWidget(),
           ),
+        ),
+        FFRoute(
+          name: 'AlertPage',
+          path: '/alertPage',
+          builder: (context, params) => AlertPageWidget(),
+        ),
+        FFRoute(
+          name: 'PrivacyPolicy',
+          path: '/privacyPolicy',
+          builder: (context, params) => NavBarPage(
+            initialPage: '',
+            page: PrivacyPolicyWidget(),
+          ),
+        ),
+        FFRoute(
+          name: 'WeatherPage',
+          path: '/weatherPage',
+          builder: (context, params) => WeatherPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

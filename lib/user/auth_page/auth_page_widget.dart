@@ -491,8 +491,6 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                         focusNode: _model.nameFocusNode,
                                         autofocus: true,
                                         autofillHints: [AutofillHints.name],
-                                        textCapitalization:
-                                            TextCapitalization.none,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelText: FFLocalizations.of(context)
@@ -501,7 +499,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                           ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .bodyMedium,
+                                                  .labelMedium,
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0xFFE0E3E7),
@@ -574,7 +572,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                         decoration: InputDecoration(
                                           labelText: FFLocalizations.of(context)
                                               .getText(
-                                            'hdxy2rb3' /* Email */,
+                                            'malou8tp' /* Email */,
                                           ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
@@ -866,9 +864,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                           }
 
                                           await UsersTable().insert({
-                                            'email': _model
-                                                .emailAddressCreateController
-                                                .text,
+                                            'email': _model.nameController.text,
                                             'name': _model.nameController.text,
                                             'id': currentUserUid,
                                           });

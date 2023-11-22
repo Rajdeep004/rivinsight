@@ -1,4 +1,3 @@
-import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +42,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
     return ClipRRect(
       child: Container(
         width: double.infinity,
-        height: 115.0,
+        height: 90.0,
         constraints: BoxConstraints(
           minWidth: double.infinity,
           maxWidth: double.infinity,
@@ -81,31 +80,6 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                         width: 114.0,
                         height: 59.0,
                         fit: BoxFit.contain,
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(1.00, 1.00),
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 5.0),
-                      child: FlutterFlowLanguageSelector(
-                        width: 100.0,
-                        backgroundColor: Color(0xFF025087),
-                        borderColor: Colors.transparent,
-                        dropdownColor: Color(0xFF025087),
-                        dropdownIconColor:
-                            FlutterFlowTheme.of(context).primaryBtnText,
-                        textStyle:
-                            FlutterFlowTheme.of(context).bodySmall.override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Colors.white,
-                                ),
-                        hideFlags: true,
-                        currentLanguage:
-                            FFLocalizations.of(context).languageCode,
-                        languages: FFLocalizations.languages(),
-                        onChanged: (lang) => setAppLanguage(context, lang),
                       ),
                     ),
                   ),

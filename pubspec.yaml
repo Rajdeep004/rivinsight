@@ -30,6 +30,7 @@ dependencies:
   auto_size_text: 3.0.0
   cached_network_image: 3.2.1
   emoji_flag_converter: 1.1.0
+  equatable: 2.0.5
   floating_bottom_navigation_bar: 1.5.2
   flutter_animate: 4.1.1+1
   flutter_cache_manager: 3.3.0
@@ -44,6 +45,7 @@ dependencies:
   hive: 2.2.3
   intl: 0.18.1
   json_path: 0.6.2
+  mime_type: 1.0.0
   octo_image: 1.0.2
   onesignal_flutter: ^5.0.1
   page_transition: 2.0.4
@@ -64,7 +66,6 @@ dependencies:
   sign_in_with_apple: 4.3.0
   sign_in_with_apple_platform_interface: 1.0.0
   sign_in_with_apple_web: 1.0.1
-  smooth_page_indicator: 1.0.1
   sqflite: 2.2.6
   storage_client: 1.5.1
   supabase: 1.6.3

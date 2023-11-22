@@ -4,7 +4,9 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/user/appbar/appbar_widget.dart';
 import '/user/news_component/news_component_widget.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,6 +30,12 @@ class _NewsFeedWidgetState extends State<NewsFeedWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => NewsFeedModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      setState(() => _model.requestCompleter = null);
+      await _model.waitForRequestCompleted();
+    });
   }
 
   @override
@@ -72,9 +80,12 @@ class _NewsFeedWidgetState extends State<NewsFeedWidget> {
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
                 child: FutureBuilder<List<NewsRow>>(
-                  future: NewsTable().queryRows(
-                    queryFn: (q) => q,
-                  ),
+                  future:
+                      (_model.requestCompleter ??= Completer<List<NewsRow>>()
+                            ..complete(NewsTable().queryRows(
+                              queryFn: (q) => q,
+                            )))
+                          .future,
                   builder: (context, snapshot) {
                     // Customize what your widget looks like when it's loading.
                     if (!snapshot.hasData) {
@@ -82,7 +93,7 @@ class _NewsFeedWidgetState extends State<NewsFeedWidget> {
                         child: SizedBox(
                           width: 50.0,
                           height: 50.0,
-                          child: SpinKitCircle(
+                          child: SpinKitRipple(
                             color: FlutterFlowTheme.of(context).primary,
                             size: 50.0,
                           ),
@@ -90,31 +101,40 @@ class _NewsFeedWidgetState extends State<NewsFeedWidget> {
                       );
                     }
                     List<NewsRow> newsListNewsRowList = snapshot.data!;
-                    return ListView.separated(
-                      padding: EdgeInsets.zero,
-                      primary: false,
-                      scrollDirection: Axis.vertical,
-                      itemCount: newsListNewsRowList.length,
-                      separatorBuilder: (_, __) => SizedBox(height: 10.0),
-                      itemBuilder: (context, newsListIndex) {
-                        final newsListNewsRow =
-                            newsListNewsRowList[newsListIndex];
-                        return wrapWithModel(
-                          model: _model.newsComponentModels.getModel(
-                            newsListNewsRow.id.toString(),
-                            newsListIndex,
-                          ),
-                          updateCallback: () => setState(() {}),
-                          child: NewsComponentWidget(
-                            key: Key(
-                              'Key11h_${newsListNewsRow.id.toString()}',
-                            ),
-                            title: newsListNewsRow.title,
-                            descripton: newsListNewsRow.description,
-                            imageURL: newsListNewsRow.imageURL,
-                          ),
-                        );
+                    return RefreshIndicator(
+                      color: FlutterFlowTheme.of(context).primary,
+                      strokeWidth: 3.0,
+                      onRefresh: () async {
+                        setState(() => _model.requestCompleter = null);
+                        await _model.waitForRequestCompleted();
                       },
+                      child: ListView.separated(
+                        padding: EdgeInsets.zero,
+                        primary: false,
+                        scrollDirection: Axis.vertical,
+                        itemCount: newsListNewsRowList.length,
+                        separatorBuilder: (_, __) => SizedBox(height: 10.0),
+                        itemBuilder: (context, newsListIndex) {
+                          final newsListNewsRow =
+                              newsListNewsRowList[newsListIndex];
+                          return wrapWithModel(
+                            model: _model.newsComponentModels.getModel(
+                              newsListNewsRow.id.toString(),
+                              newsListIndex,
+                            ),
+                            updateCallback: () => setState(() {}),
+                            child: NewsComponentWidget(
+                              key: Key(
+                                'Key11h_${newsListNewsRow.id.toString()}',
+                              ),
+                              title: newsListNewsRow.title,
+                              descripton: newsListNewsRow.description,
+                              imageURL: newsListNewsRow.imageURL,
+                              createAt: newsListNewsRow.createdAt,
+                            ),
+                          );
+                        },
+                      ),
                     );
                   },
                 ),

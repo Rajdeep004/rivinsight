@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 import 'news_component_model.dart';
 export 'news_component_model.dart';
@@ -17,11 +18,13 @@ class NewsComponentWidget extends StatefulWidget {
     this.title,
     this.descripton,
     this.imageURL,
+    required this.createAt,
   }) : super(key: key);
 
   final String? title;
   final String? descripton;
   final String? imageURL;
+  final DateTime? createAt;
 
   @override
   _NewsComponentWidgetState createState() => _NewsComponentWidgetState();
@@ -74,7 +77,7 @@ class _NewsComponentWidgetState extends State<NewsComponentWidget>
           padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
           child: Container(
             width: double.infinity,
-            height: 500.0,
+            height: 510.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).secondaryBackground,
             ),
@@ -114,7 +117,7 @@ class _NewsComponentWidgetState extends State<NewsComponentWidget>
                 ),
                 Container(
                   width: double.infinity,
-                  height: 250.0,
+                  height: 255.0,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [Color(0x00FFFFFF), Color(0x10000000)],
@@ -145,6 +148,21 @@ class _NewsComponentWidgetState extends State<NewsComponentWidget>
                                 widget.descripton!,
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context).bodyLarge,
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(1.00, 1.00),
+                              child: Text(
+                                valueOrDefault<String>(
+                                  widget.createAt?.toString(),
+                                  'DateTime',
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodySmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 10.0,
+                                    ),
                               ),
                             ),
                           ],

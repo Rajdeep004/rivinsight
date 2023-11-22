@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/user/appbar/appbar_widget.dart';
 import '/user/weatherinfo/weatherinfo_widget.dart';
 import '/flutter_flow/permissions_util.dart';
+import 'dart:async';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -266,7 +267,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.asset(
-                                      'assets/images/aerial-view-of-spectacular-atal-.jpg',
+                                      'assets/images/orig_dddd_1600288142.jpg',
                                       width: double.infinity,
                                       height: 200.0,
                                       fit: BoxFit.cover,
@@ -388,39 +389,49 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 width: 1.0,
                               ),
                             ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Align(
-                                  alignment: AlignmentDirectional(0.00, 0.00),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 10.0, 0.0),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'i8bakxo0' /* Weather Information */,
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('WeatherPage');
+                              },
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Align(
+                                    alignment: AlignmentDirectional(0.00, 0.00),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 10.0, 0.0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'i8bakxo0' /* Weather Information */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                            ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                          ),
                                     ),
                                   ),
-                                ),
-                                Align(
-                                  alignment: AlignmentDirectional(1.00, 0.00),
-                                  child: FaIcon(
-                                    FontAwesomeIcons.cloudSun,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    size: 24.0,
+                                  Align(
+                                    alignment: AlignmentDirectional(1.00, 0.00),
+                                    child: FaIcon(
+                                      FontAwesomeIcons.cloudSun,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 24.0,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -433,12 +444,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       padding:
                           EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
                       child: FutureBuilder<List<RiversRow>>(
-                        future: RiversTable().querySingleRow(
-                          queryFn: (q) => q.eq(
-                            'id',
-                            1,
-                          ),
-                        ),
+                        future: (_model.requestCompleter ??=
+                                Completer<List<RiversRow>>()
+                                  ..complete(RiversTable().querySingleRow(
+                                    queryFn: (q) => q.eq(
+                                      'id',
+                                      1,
+                                    ),
+                                  )))
+                            .future,
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
                           if (!snapshot.hasData) {
@@ -446,7 +460,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               child: SizedBox(
                                 width: 50.0,
                                 height: 50.0,
-                                child: SpinKitCircle(
+                                child: SpinKitRipple(
                                   color: FlutterFlowTheme.of(context).primary,
                                   size: 50.0,
                                 ),
@@ -459,91 +473,109 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               containerRiversRowList.isNotEmpty
                                   ? containerRiversRowList.first
                                   : null;
-                          return Container(
-                            width: MediaQuery.sizeOf(context).width * 0.9,
-                            height: 70.0,
-                            decoration: BoxDecoration(
-                              color:
-                                  FlutterFlowTheme.of(context).primaryBtnText,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 2.0,
-                                  color: Color(0x33000000),
-                                  offset: Offset(0.0, 2.0),
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(10.0),
-                              border: Border.all(
-                                color: Color(0x4A000000),
-                                width: 1.0,
+                          return InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              setState(() => _model.requestCompleter = null);
+                              await _model.waitForRequestCompleted();
+                            },
+                            child: Container(
+                              width: MediaQuery.sizeOf(context).width * 0.9,
+                              height: 70.0,
+                              decoration: BoxDecoration(
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 2.0,
+                                    color: Color(0x33000000),
+                                    offset: Offset(0.0, 2.0),
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(10.0),
+                                shape: BoxShape.rectangle,
+                                border: Border.all(
+                                  color: Color(0x4A000000),
+                                  width: 1.0,
+                                ),
                               ),
-                            ),
-                            child: Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(0.00, 0.00),
-                                    child: Row(
+                              child: Align(
+                                alignment: AlignmentDirectional(0.00, 0.00),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Align(
+                                            alignment: AlignmentDirectional(
+                                                0.00, 0.00),
+                                            child: Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '61p972pa' /* Flood Risk */,
+                                              ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                      ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
-                                        Align(
-                                          alignment:
-                                              AlignmentDirectional(0.00, 0.00),
-                                          child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              '61p972pa' /* Flood Risk */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleLarge
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                ),
-                                          ),
+                                        Text(
+                                          '${containerRiversRow?.floodrisk?.toString()}%',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                              ),
+                                        ),
+                                        Icon(
+                                          Icons.circle_sharp,
+                                          color: () {
+                                            if (containerRiversRow!.floodrisk >=
+                                                90.0) {
+                                              return FlutterFlowTheme.of(
+                                                      context)
+                                                  .error;
+                                            } else if (containerRiversRow!
+                                                    .floodrisk >=
+                                                50.0) {
+                                              return FlutterFlowTheme.of(
+                                                      context)
+                                                  .warning;
+                                            } else {
+                                              return FlutterFlowTheme.of(
+                                                      context)
+                                                  .success;
+                                            }
+                                          }(),
+                                          size: 24.0,
                                         ),
                                       ],
                                     ),
-                                  ),
-                                  Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Text(
-                                        '${containerRiversRow?.floodrisk?.toString()}%',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                            ),
-                                      ),
-                                      Icon(
-                                        Icons.circle_sharp,
-                                        color: () {
-                                          if (containerRiversRow!.floodrisk >=
-                                              90.0) {
-                                            return FlutterFlowTheme.of(context)
-                                                .error;
-                                          } else if (containerRiversRow!
-                                                  .floodrisk >=
-                                              50.0) {
-                                            return FlutterFlowTheme.of(context)
-                                                .warning;
-                                          } else {
-                                            return FlutterFlowTheme.of(context)
-                                                .success;
-                                          }
-                                        }(),
-                                        size: 24.0,
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           );

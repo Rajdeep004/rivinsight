@@ -148,7 +148,6 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomePage': HomePageWidget(),
       'ExplorePage': ExplorePageWidget(),
-      'community': CommunityWidget(),
       'NewsFeed': NewsFeedWidget(),
       'ProfilePage': ProfilePageWidget(),
     };
@@ -237,7 +236,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  FontAwesomeIcons.solidCommentDots,
+                  Icons.newspaper_rounded,
                   color: currentIndex == 2
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).unselectIcon,
@@ -245,7 +244,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    '8wxg75dj' /* Community  */,
+                    'c20q1otz' /* News */,
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -263,34 +262,8 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.newspaper_sharp,
-                  color: currentIndex == 3
-                      ? FlutterFlowTheme.of(context).primary
-                      : FlutterFlowTheme.of(context).unselectIcon,
-                  size: 24.0,
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    'c20q1otz' /* News */,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 3
-                        ? FlutterFlowTheme.of(context).primary
-                        : FlutterFlowTheme.of(context).unselectIcon,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
                   Icons.account_circle_rounded,
-                  color: currentIndex == 4
+                  color: currentIndex == 3
                       ? FlutterFlowTheme.of(context).primary
                       : FlutterFlowTheme.of(context).unselectIcon,
                   size: 30.0,
@@ -301,7 +274,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   ),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: currentIndex == 4
+                    color: currentIndex == 3
                         ? FlutterFlowTheme.of(context).primary
                         : FlutterFlowTheme.of(context).unselectIcon,
                     fontSize: 11.0,

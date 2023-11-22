@@ -108,6 +108,11 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // ProfilePage
   {
+    'zukk0ph6': {
+      'en': 'App Language',
+      'gu': '',
+      'hi': '',
+    },
     'r8x1hvh4': {
       'en': 'Your Account',
       'gu': 'તમારું ખાતું',
@@ -137,6 +142,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Terms of Service',
       'gu': 'સેવાની શરતો',
       'hi': 'सेवा की शर्तें',
+    },
+    'jseulhdo': {
+      'en': 'Privacy Policy ',
+      'gu': 'ગોપનીયતા નીતિ',
+      'hi': 'गोपनीयता नीति',
     },
     '43tq2u9g': {
       'en': 'Log Out',
@@ -250,39 +260,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Explore',
       'gu': 'અન્વેષણ કરો',
       'hi': 'अन्वेषण करना',
-    },
-  },
-  // community
-  {
-    '48gcyz5b': {
-      'en': 'News',
-      'gu': 'સમાચાર',
-      'hi': 'समाचार',
-    },
-    '8r1kfzay': {
-      'en': 'Community',
-      'gu': 'સમુદાય',
-      'hi': 'समुदाय',
-    },
-    'r3w6ry2c': {
-      'en': 'Forum',
-      'gu': 'ફોરમ',
-      'hi': 'मंच',
-    },
-    'dtp8usnm': {
-      'en': 'Groups',
-      'gu': 'જૂથો',
-      'hi': 'समूह',
-    },
-    'lzoqodhs': {
-      'en': 'Some Of trending News are here :',
-      'gu': 'કેટલાક ટ્રેન્ડિંગ સમાચાર અહીં છે:',
-      'hi': 'कुछ चर्चित समाचार यहां हैं:',
-    },
-    '8wxg75dj': {
-      'en': 'Community ',
-      'gu': 'સમુદાય',
-      'hi': 'समुदाय',
     },
   },
   // HomePage
@@ -405,8 +382,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '7ne2bc9f': {
       'en': 'Gallery',
-      'gu': '',
-      'hi': '',
+      'gu': 'ગેલેરી',
+      'hi': 'गैलरी',
     },
     '5tj27qgo': {
       'en': 'Home',
@@ -457,6 +434,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': 'साइन अप करें',
     },
     'hdxy2rb3': {
+      'en': 'Name',
+      'gu': 'નામ',
+      'hi': 'नाम',
+    },
+    'malou8tp': {
       'en': 'Email',
       'gu': 'ઈમેલ',
       'hi': 'ईमेल',
@@ -507,8 +489,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8mk8lv06': {
       'en': 'Back to home page',
-      'gu': '',
-      'hi': '',
+      'gu': 'હોમ પેજ પર પાછા ફરો',
+      'hi': 'मुखपृष्ठ पर वापस',
     },
     'csjvw37t': {
       'en': 'Home',
@@ -520,53 +502,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'a4rz768d': {
       'en': 'Water Management',
-      'gu': '',
-      'hi': '',
+      'gu': 'પાણી વ્યવસ્થાપન',
+      'hi': 'जल प्रबंधन',
     },
     'w5o9eqnz': {
       'en': '45%  Irrigation',
-      'gu': '',
-      'hi': '',
+      'gu': '45% સિંચાઈ',
+      'hi': '45% सिंचाई',
     },
     'n2eler13': {
       'en': '25% Industrial Use',
-      'gu': '',
-      'hi': '',
+      'gu': '25% ઔદ્યોગિક ઉપયોગ',
+      'hi': '25% औद्योगिक उपयोग',
     },
     'v18n52q9': {
       'en': '20% Drinking ',
-      'gu': '',
-      'hi': '',
+      'gu': '20% પીવું',
+      'hi': '20% शराब पीना',
     },
     'apxhgae9': {
       'en': '10% Others',
-      'gu': '',
-      'hi': '',
+      'gu': '10% અન્ય',
+      'hi': '10% अन्य',
     },
     '74nwg18g': {
       'en': 'Climate Chnage Impact',
-      'gu': '',
-      'hi': '',
+      'gu': 'ક્લાઈમેટ ચેન્જ ઈમ્પેક્ટ',
+      'hi': 'जलवायु परिवर्तन का प्रभाव',
     },
     'v4kp6fbj': {
       'en': 'Biodiversity Conservation',
-      'gu': '',
-      'hi': '',
+      'gu': 'જૈવવિવિધતા સંરક્ષણ',
+      'hi': 'जैव विविधता संरक्षण',
     },
     'wfq9yc6q': {
       'en': 'Navigation & Transportation',
-      'gu': '',
-      'hi': '',
+      'gu': 'નેવિગેશન અને ટ્રાન્સપોર્ટેશન',
+      'hi': 'नेविगेशन एवं परिवहन',
     },
     '6a0ls7pb': {
       'en': 'Land Use Guidance',
-      'gu': '',
-      'hi': '',
+      'gu': 'જમીન ઉપયોગ માર્ગદર્શન',
+      'hi': 'भूमि उपयोग मार्गदर्शन',
     },
     'jyhlof26': {
       'en': 'Scientific Research',
-      'gu': '',
-      'hi': '',
+      'gu': 'વૈજ્ઞાનિક સંશોધન',
+      'hi': 'वैज्ञानिक अनुसंधान',
     },
     'u1pqo02s': {
       'en': 'Home',
@@ -578,37 +560,50 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'c20q1otz': {
       'en': 'News',
-      'gu': '',
-      'hi': '',
+      'gu': 'સમાચાર',
+      'hi': 'समाचार',
     },
   },
   // WaterTips
   {
     'y0x5ytnr': {
       'en': 'Water Conservation Tips',
-      'gu': '',
-      'hi': '',
+      'gu': 'જળ સંરક્ષણ ટિપ્સ',
+      'hi': 'जल संरक्षण युक्तियाँ',
     },
     '0nqnbzhn': {
       'en': 'Home',
+      'gu': 'ઘર',
+      'hi': 'घर',
+    },
+  },
+  // AlertPage
+  {
+    '98gvuz3d': {
+      'en': 'Page Title',
+      'gu': 'પૃષ્ઠ શીર્ષક',
+      'hi': 'पृष्ठ का शीर्षक',
+    },
+    'dsbto680': {
+      'en': 'Home',
+      'gu': 'ઘર',
+      'hi': 'घर',
+    },
+  },
+  // PrivacyPolicy
+  {
+    'tamh4pl6': {
+      'en': 'Privacy Policy',
       'gu': '',
       'hi': '',
     },
   },
-  // news
+  // WeatherPage
   {
-    'x7vfjai2': {
-      'en': 'BREAKING NEWS',
-      'gu': 'તાજા સમાચાર',
-      'hi': 'आज की ताजा खबर',
-    },
-    'tjz0jakw': {
-      'en':
-          'India\'s New Delhi blanketed by toxic haze, world\'s most polluted city again',
-      'gu':
-          'ભારતનું નવી દિલ્હી ઝેરી ધુમ્મસથી ઢંકાયેલું છે, વિશ્વનું સૌથી પ્રદૂષિત શહેર ફરીથી',
-      'hi':
-          'जहरीली धुंध की चपेट में भारत का नई दिल्ली, फिर बना दुनिया का सबसे प्रदूषित शहर',
+    '4tbswzxt': {
+      'en': 'Home',
+      'gu': '',
+      'hi': '',
     },
   },
   // HISTORY
@@ -630,7 +625,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Significance in Hinduism\nIn Rajasthan, it is believed that the Sabarmati River originated due to the penance of ascetic Kashyapa on Mount Abu. His penance had pleased Shiva and in return, Shiva gave ascetic Kashyapa the Ganges River. The Ganges River flowed from Shiva\'s hair onto Mount Abu and became the Sabarmati River. In another legend surrounding the origin of the river, Shiva brought the goddess Ganga to Gujarat and that caused the Sabarmati to come into being.',
       'gu':
-          'હિન્દુ ધર્મમાં મહત્વ\nરાજસ્થાનમાં, એવું માનવામાં આવે છે કે માઉન્ટ આબુ પર તપસ્વી કશ્યપની તપસ્યાને કારણે સાબરમતી નદીની ઉત્પત્તિ થઈ હતી. તેમની તપસ્યાથી શિવ પ્રસન્ન થયા અને બદલામાં શિવે તપસ્વી કશ્યપને ગંગા નદી આપી. ગંગા નદી શિવના વાળમાંથી માઉન્ટ આબુ પર વહેતી થઈ અને સાબરમતી નદી બની. નદીની ઉત્પત્તિની આસપાસના અન્ય દંતકથામાં, શિવ દેવી ગંગાને ગુજરાતમાં લાવ્યા અને તેના કારણે સાબરમતી અસ્તિત્વમાં આવી.',
+          'હિંદુ ધર્મમાં મહત્વ\nરાજસ્થાનમાં, એવું માનવામાં આવે છે કે માઉન્ટ આબુ પર તપસ્વી કશ્યપની તપસ્યાને કારણે સાબરમતી નદીની ઉત્પત્તિ થઈ હતી. તેમની તપસ્યાથી શિવ પ્રસન્ન થયા અને બદલામાં શિવે તપસ્વી કશ્યપને ગંગા નદી આપી. ગંગા નદી શિવના વાળમાંથી માઉન્ટ આબુ પર વહેતી થઈ અને સાબરમતી નદી બની. નદીની ઉત્પત્તિની આસપાસના અન્ય દંતકથામાં, શિવ દેવી ગંગાને ગુજરાતમાં લાવ્યા અને તેના કારણે સાબરમતી અસ્તિત્વમાં આવી.',
       'hi':
           'हिंदू धर्म में महत्व\nराजस्थान में यह माना जाता है कि साबरमती नदी का उद्गम माउंट आबू पर तपस्वी कश्यप की तपस्या से हुआ था। उनकी तपस्या से शिव प्रसन्न हुए और बदले में शिव ने तपस्वी कश्यप को गंगा नदी दी। गंगा नदी शिव की जटाओं से निकलकर माउंट आबू तक पहुंची और साबरमती नदी बन गई। नदी की उत्पत्ति के बारे में एक अन्य किंवदंती के अनुसार, शिव देवी गंगा को गुजरात ले आए और इससे साबरमती अस्तित्व में आई।',
     },
@@ -657,29 +652,43 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '6e8s8ub6': {
       'en': 'Biodiversity Conservation',
-      'gu': '',
-      'hi': '',
+      'gu': 'જૈવવિવિધતા સંરક્ષણ',
+      'hi': 'जैव विविधता संरक्षण',
     },
     'sbi6aous': {
       'en': 'Here we add all info about Bio Con',
-      'gu': '',
-      'hi': '',
+      'gu': 'અહીં અમે Bio Con વિશે તમામ માહિતી ઉમેરીએ છીએ',
+      'hi': 'यहां हम बायो कॉन के बारे में सारी जानकारी जोड़ते हैं',
     },
   },
   // ProfileEdit
   {
     'o09vbelc': {
       'en': 'Profile',
-      'gu': '',
-      'hi': '',
+      'gu': 'પ્રોફાઇલ',
+      'hi': 'प्रोफ़ाइल',
     },
     'ym9dag40': {
       'en': 'Name',
-      'gu': '',
-      'hi': '',
+      'gu': 'નામ',
+      'hi': 'नाम',
     },
     'a0s012q9': {
       'en': 'Save',
+      'gu': 'સાચવો',
+      'hi': 'बचाना',
+    },
+  },
+  // PrivacyPOlicy
+  {
+    '1lnjwgrv': {
+      'en': 'Main Header',
+      'gu': '',
+      'hi': '',
+    },
+    '1zmoqkyc': {
+      'en':
+          'I’ll be working on a few different proposals, let me know when you’ve got time to go over them before the weekend.',
       'gu': '',
       'hi': '',
     },

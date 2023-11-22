@@ -7,6 +7,7 @@ export 'table.dart';
 
 export 'tables/w_ctips.dart';
 export 'tables/notifications.dart';
+export 'tables/gallery.dart';
 export 'tables/users.dart';
 export 'tables/rivers.dart';
 export 'tables/news.dart';
