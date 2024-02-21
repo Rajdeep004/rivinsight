@@ -28,4 +28,7 @@ class NewsRow extends SupabaseDataRow {
 
   String? get imageURL => getField<String>('imageURL');
   set imageURL(String? value) => setField<String>('imageURL', value);
+
+  String? get author => getField<String>('author');
+  set author(String? value) => setField<String>('author', value);
 }

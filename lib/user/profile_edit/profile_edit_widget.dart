@@ -14,14 +14,14 @@ export 'profile_edit_model.dart';
 
 class ProfileEditWidget extends StatefulWidget {
   const ProfileEditWidget({
-    Key? key,
+    super.key,
     this.oldUserName,
-  }) : super(key: key);
+  });
 
   final String? oldUserName;
 
   @override
-  _ProfileEditWidgetState createState() => _ProfileEditWidgetState();
+  State<ProfileEditWidget> createState() => _ProfileEditWidgetState();
 }
 
 class _ProfileEditWidgetState extends State<ProfileEditWidget> {
@@ -58,7 +58,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
         color: Color(0x55FFFFFF),
       ),
       child: Align(
-        alignment: AlignmentDirectional(0.00, 0.00),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 250.0, 0.0, 0.0),
           child: InkWell(
@@ -74,10 +74,9 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.00, 0.00),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+                    padding: EdgeInsets.all(10.0),
                     child: Container(
                       width: double.infinity,
                       height: 169.0,
@@ -93,7 +92,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                         borderRadius: BorderRadius.circular(10.0),
                         shape: BoxShape.rectangle,
                       ),
-                      alignment: AlignmentDirectional(0.00, 0.00),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -122,7 +121,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.00, 0.00),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 10.0, 0.0, 0.0),
@@ -139,8 +138,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                10.0, 10.0, 10.0, 10.0),
+                            padding: EdgeInsets.all(10.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10.0),
                               child: Container(
@@ -152,7 +150,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.00, 0.00),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         10.0, 0.0, 10.0, 0.0),
@@ -176,7 +174,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                                             children: [
                                               Align(
                                                 alignment: AlignmentDirectional(
-                                                    -1.00, 0.00),
+                                                    -1.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -303,7 +301,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(1.00, 0.00),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(

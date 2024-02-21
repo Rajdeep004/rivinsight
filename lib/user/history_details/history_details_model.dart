@@ -1,7 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbar/appbar_widget.dart';
+import '/user/app_bar/app_bar_widget.dart';
 import 'history_details_widget.dart' show HistoryDetailsWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,18 +13,20 @@ class HistoryDetailsModel extends FlutterFlowModel<HistoryDetailsWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Model for APPBAR component.
-  late AppbarModel appbarModel;
+  // Model for AppBar component.
+  late AppBarModel appBarModel;
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
-    appbarModel = createModel(context, () => AppbarModel());
+    appBarModel = createModel(context, () => AppBarModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
-    appbarModel.dispose();
+    appBarModel.dispose();
   }
 
   /// Action blocks are added here.

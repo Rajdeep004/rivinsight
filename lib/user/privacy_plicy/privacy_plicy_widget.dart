@@ -5,18 +5,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'privacy_p_olicy_model.dart';
-export 'privacy_p_olicy_model.dart';
+import 'privacy_plicy_model.dart';
+export 'privacy_plicy_model.dart';
 
-class PrivacyPOlicyWidget extends StatefulWidget {
-  const PrivacyPOlicyWidget({Key? key}) : super(key: key);
+class PrivacyPlicyWidget extends StatefulWidget {
+  const PrivacyPlicyWidget({super.key});
 
   @override
-  _PrivacyPOlicyWidgetState createState() => _PrivacyPOlicyWidgetState();
+  State<PrivacyPlicyWidget> createState() => _PrivacyPlicyWidgetState();
 }
 
-class _PrivacyPOlicyWidgetState extends State<PrivacyPOlicyWidget> {
-  late PrivacyPOlicyModel _model;
+class _PrivacyPlicyWidgetState extends State<PrivacyPlicyWidget> {
+  late PrivacyPlicyModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -27,7 +27,7 @@ class _PrivacyPOlicyWidgetState extends State<PrivacyPOlicyWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => PrivacyPOlicyModel());
+    _model = createModel(context, () => PrivacyPlicyModel());
   }
 
   @override

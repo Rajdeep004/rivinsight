@@ -1,8 +1,9 @@
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbar/appbar_widget.dart';
+import '/user/app_bar/app_bar_widget.dart';
 import 'explore_page_widget.dart' show ExplorePageWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -23,22 +24,24 @@ class ExplorePageModel extends FlutterFlowModel<ExplorePageWidget> {
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
 
-  // Model for APPBAR component.
-  late AppbarModel appbarModel;
+  // Model for AppBar component.
+  late AppBarModel appBarModel;
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
-    appbarModel = createModel(context, () => AppbarModel());
+    appBarModel = createModel(context, () => AppBarModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
 
     tabBarController?.dispose();
-    appbarModel.dispose();
+    appBarModel.dispose();
   }
 
   /// Action blocks are added here.

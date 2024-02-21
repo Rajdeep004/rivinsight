@@ -11,18 +11,18 @@ export 'water_conserv_model.dart';
 
 class WaterConservWidget extends StatefulWidget {
   const WaterConservWidget({
-    Key? key,
+    super.key,
     required this.content,
     required this.image,
     required this.id,
-  }) : super(key: key);
+  });
 
   final String? content;
   final String? image;
   final int? id;
 
   @override
-  _WaterConservWidgetState createState() => _WaterConservWidgetState();
+  State<WaterConservWidget> createState() => _WaterConservWidgetState();
 }
 
 class _WaterConservWidgetState extends State<WaterConservWidget> {
@@ -53,7 +53,7 @@ class _WaterConservWidgetState extends State<WaterConservWidget> {
       mainAxisSize: MainAxisSize.max,
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+          padding: EdgeInsets.all(10.0),
           child: Container(
             width: double.infinity,
             height: 358.0,

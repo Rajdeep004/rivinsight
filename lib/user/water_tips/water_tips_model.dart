@@ -3,7 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbar/appbar_widget.dart';
+import '/user/app_bar/app_bar_widget.dart';
 import '/user/water_conserv/water_conserv_widget.dart';
 import 'water_tips_widget.dart' show WaterTipsWidget;
 import 'package:flutter/material.dart';
@@ -18,22 +18,24 @@ class WaterTipsModel extends FlutterFlowModel<WaterTipsWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Model for APPBAR component.
-  late AppbarModel appbarModel;
   // Models for WaterConserv dynamic component.
   late FlutterFlowDynamicModels<WaterConservModel> waterConservModels;
+  // Model for AppBar component.
+  late AppBarModel appBarModel;
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
-    appbarModel = createModel(context, () => AppbarModel());
     waterConservModels = FlutterFlowDynamicModels(() => WaterConservModel());
+    appBarModel = createModel(context, () => AppBarModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
-    appbarModel.dispose();
     waterConservModels.dispose();
+    appBarModel.dispose();
   }
 
   /// Action blocks are added here.

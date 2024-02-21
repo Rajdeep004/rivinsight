@@ -10,7 +10,12 @@ export '/user/history_details/history_details_widget.dart'
 export '/user/more_info/more_info_widget.dart' show MoreInfoWidget;
 export '/user/news_feed/news_feed_widget.dart' show NewsFeedWidget;
 export '/user/water_tips/water_tips_widget.dart' show WaterTipsWidget;
-export '/user/alert_page/alert_page_widget.dart' show AlertPageWidget;
 export '/user/privacy_policy/privacy_policy_widget.dart'
     show PrivacyPolicyWidget;
 export '/user/weather_page/weather_page_widget.dart' show WeatherPageWidget;
+export '/user/climate_change_page/climate_change_page_widget.dart'
+    show ClimateChangePageWidget;
+export '/user/biodiversity_page/biodiversity_page_widget.dart'
+    show BiodiversityPageWidget;
+export '/user/land_use_page/land_use_page_widget.dart' show LandUsePageWidget;
+export '/user/tn_s_page/tn_s_page_widget.dart' show TnSPageWidget;

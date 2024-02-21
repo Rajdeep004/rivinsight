@@ -10,6 +10,7 @@ const kPermissionStateToBool = {
 };
 
 final notificationsPermission = Permission.notification;
+final locationPermission = Permission.location;
 
 Future<bool> getPermissionStatus(Permission setting) async {
   if (kIsWeb) {

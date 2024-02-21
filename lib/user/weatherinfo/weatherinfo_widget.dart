@@ -11,10 +11,10 @@ import 'weatherinfo_model.dart';
 export 'weatherinfo_model.dart';
 
 class WeatherinfoWidget extends StatefulWidget {
-  const WeatherinfoWidget({Key? key}) : super(key: key);
+  const WeatherinfoWidget({super.key});
 
   @override
-  _WeatherinfoWidgetState createState() => _WeatherinfoWidgetState();
+  State<WeatherinfoWidget> createState() => _WeatherinfoWidgetState();
 }
 
 class _WeatherinfoWidgetState extends State<WeatherinfoWidget> {
@@ -59,7 +59,7 @@ class _WeatherinfoWidgetState extends State<WeatherinfoWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                   child: Container(
@@ -79,8 +79,7 @@ class _WeatherinfoWidgetState extends State<WeatherinfoWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          20.0, 20.0, 20.0, 20.0),
+                      padding: EdgeInsets.all(20.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,

@@ -170,8 +170,8 @@ class _NavBarPageState extends State<NavBarPage> {
         }),
         backgroundColor: Colors.white,
         selectedItemColor: FlutterFlowTheme.of(context).primary,
-        unselectedItemColor: FlutterFlowTheme.of(context).unselectIcon,
-        selectedBackgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        unselectedItemColor: Color(0xFF3C3C3C),
+        selectedBackgroundColor: Color(0x00FFFFFF),
         borderRadius: 8.0,
         itemBorderRadius: 8.0,
         margin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -187,7 +187,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   FontAwesomeIcons.home,
                   color: currentIndex == 0
                       ? FlutterFlowTheme.of(context).primary
-                      : FlutterFlowTheme.of(context).unselectIcon,
+                      : Color(0xFF3C3C3C),
                   size: 24.0,
                 ),
                 Text(
@@ -198,7 +198,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 0
                         ? FlutterFlowTheme.of(context).primary
-                        : FlutterFlowTheme.of(context).unselectIcon,
+                        : Color(0xFF3C3C3C),
                     fontSize: 11.0,
                   ),
                 ),
@@ -213,7 +213,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   Icons.explore_sharp,
                   color: currentIndex == 1
                       ? FlutterFlowTheme.of(context).primary
-                      : FlutterFlowTheme.of(context).unselectIcon,
+                      : Color(0xFF3C3C3C),
                   size: 27.0,
                 ),
                 Text(
@@ -224,7 +224,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 1
                         ? FlutterFlowTheme.of(context).primary
-                        : FlutterFlowTheme.of(context).unselectIcon,
+                        : Color(0xFF3C3C3C),
                     fontSize: 11.0,
                   ),
                 ),
@@ -239,7 +239,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   Icons.newspaper_rounded,
                   color: currentIndex == 2
                       ? FlutterFlowTheme.of(context).primary
-                      : FlutterFlowTheme.of(context).unselectIcon,
+                      : Color(0xFF3C3C3C),
                   size: 24.0,
                 ),
                 Text(
@@ -250,7 +250,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 2
                         ? FlutterFlowTheme.of(context).primary
-                        : FlutterFlowTheme.of(context).unselectIcon,
+                        : Color(0xFF3C3C3C),
                     fontSize: 11.0,
                   ),
                 ),
@@ -265,7 +265,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   Icons.account_circle_rounded,
                   color: currentIndex == 3
                       ? FlutterFlowTheme.of(context).primary
-                      : FlutterFlowTheme.of(context).unselectIcon,
+                      : Color(0xFF3C3C3C),
                   size: 30.0,
                 ),
                 Text(
@@ -276,7 +276,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 3
                         ? FlutterFlowTheme.of(context).primary
-                        : FlutterFlowTheme.of(context).unselectIcon,
+                        : Color(0xFF3C3C3C),
                     fontSize: 11.0,
                   ),
                 ),

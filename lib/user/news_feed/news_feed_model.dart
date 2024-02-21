@@ -2,7 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbar/appbar_widget.dart';
+import '/user/app_bar/app_bar_widget.dart';
 import '/user/news_component/news_component_widget.dart';
 import 'dart:async';
 import 'news_feed_widget.dart' show NewsFeedWidget;
@@ -17,22 +17,25 @@ class NewsFeedModel extends FlutterFlowModel<NewsFeedWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  Completer<List<NewsRow>>? requestCompleter;
-  // Model for APPBAR component.
-  late AppbarModel appbarModel;
+  bool requestCompleted = false;
+  String? requestLastUniqueKey;
+  // Model for AppBar component.
+  late AppBarModel appBarModel;
   // Models for NewsComponent dynamic component.
   late FlutterFlowDynamicModels<NewsComponentModel> newsComponentModels;
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
-    appbarModel = createModel(context, () => AppbarModel());
+    appBarModel = createModel(context, () => AppBarModel());
     newsComponentModels = FlutterFlowDynamicModels(() => NewsComponentModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
-    appbarModel.dispose();
+    appBarModel.dispose();
     newsComponentModels.dispose();
   }
 
@@ -48,7 +51,7 @@ class NewsFeedModel extends FlutterFlowModel<NewsFeedWidget> {
     while (true) {
       await Future.delayed(Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
-      final requestComplete = requestCompleter?.isCompleted ?? false;
+      final requestComplete = requestCompleted;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {
         break;
       }

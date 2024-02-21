@@ -108,47 +108,42 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // ProfilePage
   {
-    'zukk0ph6': {
+    'ljdqcuv1': {
       'en': 'App Language',
-      'gu': '',
-      'hi': '',
+      'gu': 'એપ્લિકેશન ભાષા',
+      'hi': 'ऐप भाषा',
     },
-    'r8x1hvh4': {
+    'cckzjiln': {
       'en': 'Your Account',
       'gu': 'તમારું ખાતું',
       'hi': 'आपका खाता',
     },
-    'd813h2iy': {
+    'w37fk098': {
       'en': 'Edit Profile',
       'gu': 'પ્રોફાઇલ સંપાદિત કરો',
       'hi': 'प्रोफ़ाइल संपादित करें',
     },
-    '8jcjcomm': {
+    'el8b9k28': {
       'en': 'Water Conservation Tips',
       'gu': 'જળ સંરક્ષણ ટિપ્સ',
       'hi': 'जल संरक्षण युक्तियाँ',
     },
-    'k0lmh35f': {
+    '9t5ley2z': {
       'en': 'App Settings',
       'gu': 'એપ્લિકેશન સેટિંગ્સ',
       'hi': 'एप्लिकेशन सेटिंग',
     },
-    'ubb3dnxo': {
+    'mog6jzqh': {
       'en': 'Support',
       'gu': 'આધાર',
       'hi': 'सहायता',
     },
-    '8mks96mg': {
+    'eapwy0ah': {
       'en': 'Terms of Service',
       'gu': 'સેવાની શરતો',
       'hi': 'सेवा की शर्तें',
     },
-    'jseulhdo': {
-      'en': 'Privacy Policy ',
-      'gu': 'ગોપનીયતા નીતિ',
-      'hi': 'गोपनीयता नीति',
-    },
-    '43tq2u9g': {
+    '5llfl7gp': {
       'en': 'Log Out',
       'gu': 'લૉગ આઉટ',
       'hi': 'लॉग आउट',
@@ -166,95 +161,40 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'gu': 'સૂચિઓ શોધો...',
       'hi': 'सूचियाँ खोजें...',
     },
-    'ofxgr9ny': {
-      'en': 'Rivers',
-      'gu': 'નદીઓ',
-      'hi': 'नदियों',
-    },
-    'hyiv5s8j': {
-      'en': 'Maidstone, San Antonio, Tx.',
-      'gu': 'મેઇડસ્ટોન, સાન એન્ટોનિયો, Tx.',
-      'hi': 'मेडस्टोन, सैन एंटोनियो, टीएक्स।',
-    },
-    'r0zjienl': {
-      'en': '\$210/night',
-      'gu': '\$210/રાત',
-      'hi': '\$210/रात',
-    },
-    'hvn2cx10': {
-      'en': '32 miles away',
-      'gu': '32 માઇલ દૂર',
-      'hi': '32 मील दूर',
-    },
-    'jxbech65': {
-      'en': '4.25',
-      'gu': '4.25',
-      'hi': '4.25',
-    },
-    '5a5f60m2': {
-      'en': 'Maidstone, San Antonio, Tx.',
-      'gu': 'મેઇડસ્ટોન, સાન એન્ટોનિયો, Tx.',
-      'hi': 'मेडस्टोन, सैन एंटोनियो, टीएक्स।',
-    },
-    'kmyfwqk8': {
-      'en': '\$210/night',
-      'gu': '\$210/રાત',
-      'hi': '\$210/रात',
-    },
-    'nltlkcpg': {
-      'en': '32 miles away',
-      'gu': '32 માઇલ દૂર',
-      'hi': '32 मील दूर',
-    },
-    '4rj5n7jh': {
-      'en': '4.25',
-      'gu': '4.25',
-      'hi': '4.25',
-    },
-    'k1meix2o': {
+    '5btnkyx1': {
       'en': 'Tourism',
       'gu': 'પ્રવાસન',
       'hi': 'पर्यटन',
     },
-    'qo1sln2e': {
-      'en': 'Maidstone, San Antonio, Tx.',
-      'gu': 'મેઇડસ્ટોન, સાન એન્ટોનિયો, Tx.',
-      'hi': 'मेडस्टोन, सैन एंटोनियो, टीएक्स।',
+    'hylzhra9': {
+      'en': 'Address :',
+      'gu': '',
+      'hi': '',
     },
-    'hy6gcqte': {
-      'en': '\$210/night',
-      'gu': '\$210/રાત',
-      'hi': '\$210/रात',
+    'mkzvjhdh': {
+      'en': 'Timing :',
+      'gu': '',
+      'hi': '',
     },
-    '3uflvw0g': {
-      'en': '32 miles away',
-      'gu': '32 માઇલ દૂર',
-      'hi': '32 मील दूर',
+    'k1meix2o': {
+      'en': 'Event',
+      'gu': 'પ્રવાસન',
+      'hi': 'पर्यटन',
     },
-    '5x01epbn': {
-      'en': '4.25',
-      'gu': '4.25',
-      'hi': '4.25',
+    'qjluefny': {
+      'en': 'Address :',
+      'gu': '',
+      'hi': '',
     },
-    'rd46hg6q': {
-      'en': 'Maidstone, San Antonio, Tx.',
-      'gu': 'મેઇડસ્ટોન, સાન એન્ટોનિયો, Tx.',
-      'hi': 'मेडस्टोन, सैन एंटोनियो, टीएक्स।',
+    'wi53wz9j': {
+      'en': 'Dates :',
+      'gu': '',
+      'hi': '',
     },
-    'p6bn021d': {
-      'en': '\$210/night',
-      'gu': '\$210/રાત',
-      'hi': '\$210/रात',
-    },
-    'emrpvgkl': {
-      'en': '32 miles away',
-      'gu': '32 માઇલ દૂર',
-      'hi': '32 मील दूर',
-    },
-    'cbjmn9wv': {
-      'en': '4.25',
-      'gu': '4.25',
-      'hi': '4.25',
+    'irhxnv31': {
+      'en': 'Timing :',
+      'gu': '',
+      'hi': '',
     },
     '8xloo0e1': {
       'en': 'Explore',
@@ -293,6 +233,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Flood Risk',
       'gu': 'પૂરનું જોખમ',
       'hi': 'बाढ़ का खतरा',
+    },
+    'r0uej90b': {
+      'en': 'All Clear!',
+      'gu': 'ગ્રીન એલર્ટ છે',
+      'hi': 'ग्रीन अलर्ट है',
+    },
+    '2alv2crl': {
+      'en':
+          'The river is currently in the Green zone, signifying low flood risk. Enjoy your time by the river with peace of mind, and stay informed for any updates on our app.',
+      'gu': 'ઓલસેટ ચિંતા કરવાની જરૂર નથી',
+      'hi': 'ऑलसेट चिंता करने की कोई जरूरत नहीं है',
+    },
+    'yddrjcsh': {
+      'en': 'Urgent Warning! ',
+      'gu': 'રેડ એલર્ટ છે',
+      'hi': 'रेड अलर्ट है',
+    },
+    '5agebjt9': {
+      'en':
+          'The river has reached the Red zone, signalling a high flood risk. Prioritize safety, avoid river areas, and follow emergency guidelines. Our app will provide real-time updates to guide you through this situation.',
+      'gu': 'જો જરૂરી હોય તો સ્થળાંતર કરવા માટે કૃપા કરીને સાવચેત રહો',
+      'hi': 'कृपया सावधान रहें यदि आवश्यक हो तो प्रवास करें',
+    },
+    '5pr08m59': {
+      'en': 'Caution!',
+      'gu': 'યલો એલર્ટ છે',
+      'hi': 'येलो अलर्ट है',
+    },
+    'xlfkpoz8': {
+      'en':
+          'The river has entered the Yellow zone, indicating a moderate flood risk. Stay aware of changing conditions, and receive timely updates through our app to make informed decision',
+      'gu': 'પૂરની શક્યતા છે',
+      'hi': 'बाढ़ की आशंका है',
     },
     'sdobbi1u': {
       'en': 'Water Management',
@@ -380,10 +353,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // PhotoGallery
   {
-    '7ne2bc9f': {
+    '8iho4kf1': {
       'en': 'Gallery',
-      'gu': 'ગેલેરી',
-      'hi': 'गैलरी',
+      'gu': '',
+      'hi': '',
     },
     '5tj27qgo': {
       'en': 'Home',
@@ -433,7 +406,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'gu': 'સાઇન અપ કરો',
       'hi': 'साइन अप करें',
     },
-    'hdxy2rb3': {
+    'vzns9vyv': {
       'en': 'Name',
       'gu': 'નામ',
       'hi': 'नाम',
@@ -466,31 +439,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // HistoryDetails
   {
-    '8qwn5qm2': {
+    'nchnm27c': {
       'en': 'History Of River',
-      'gu': 'નદીનો ઇતિહાસ',
-      'hi': 'नदी का इतिहास',
+      'gu': '',
+      'hi': '',
     },
-    'd9356a8n': {
+    '88hwn89q': {
       'en':
           'Rajashekhara\'s Kavya-mimamsa (10th century) calls the river Shvabhravati (IAST: Śvabhravatī). The 11th century text Shringara-manjari-katha calls it \"Sambhramavati\" (literally, \"full of fickleness\"). Jain Acharya Buddhisagarsuri has written many poems about the Sabarmati River. During India\'s independence struggle, Mahatma Gandhi established the Sabarmati Ashram as his home on the banks of this river. In 2018, an assessment by the Central Pollution Control Board (CPCB) named the Kheroj-Vautha stretch of the Sabarmati among the most polluted river stretches in India.',
-      'gu':
-          'રાજશેખરની કાવ્ય-મીમાંસા (10મી સદી) શ્વભરાવતી નદીને (IAST: Śvabhravatī) કહે છે. 11મી સદીના લખાણ શ્રૃંગારા-મંજરી-કથા તેને \"સંભ્રમાવતી\" (શાબ્દિક રીતે, \"ચંચળતાથી ભરેલી\") કહે છે. જૈન આચાર્ય બુદ્ધિસાગરસૂરિએ સાબરમતી નદી વિશે ઘણી કવિતાઓ લખી છે. ભારતની સ્વતંત્રતા સંગ્રામ દરમિયાન, મહાત્મા ગાંધીએ આ નદીના કિનારે સાબરમતી આશ્રમની સ્થાપના કરી હતી. 2018 માં, સેન્ટ્રલ પોલ્યુશન કંટ્રોલ બોર્ડ (CPCB) દ્વારા કરવામાં આવેલા મૂલ્યાંકનમાં સાબરમતીના ખેરોજ-વૌથા વિસ્તારને ભારતમાં સૌથી વધુ પ્રદૂષિત નદીના પટમાં નામ આપવામાં આવ્યું હતું.',
-      'hi':
-          'राजशेखर की काव्य-मीमांसा (10वीं शताब्दी) में नदी को श्वभ्रावती (IAST: श्वभ्रावती) कहा गया है। 11वीं शताब्दी का पाठ श्रृंगार-मंजरी-कथा इसे \"संभ्रमवती\" (शाब्दिक रूप से, \"चंचलता से भरा\") कहता है। जैन आचार्य बुद्धिसागरसूरि ने साबरमती नदी के बारे में कई कविताएँ लिखी हैं। भारत के स्वतंत्रता संग्राम के दौरान, महात्मा गांधी ने इस नदी के तट पर अपने घर के रूप में साबरमती आश्रम की स्थापना की। 2018 में, केंद्रीय प्रदूषण नियंत्रण बोर्ड (सीपीसीबी) के एक आकलन ने साबरमती के खेरोज-वुथा खंड को भारत में सबसे प्रदूषित नदी खंडों में से एक बताया।',
+      'gu': '',
+      'hi': '',
     },
-    '1vxyoo35': {
+    '78upjfhd': {
       'en':
           'Significance in Hinduism\nIn Rajasthan, it is believed that the Sabarmati River originated due to the penance of ascetic Kashyapa on Mount Abu. His penance had pleased Shiva and in return, Shiva gave ascetic Kashyapa the Ganges River. The Ganges River flowed from Shiva\'s hair onto Mount Abu and became the Sabarmati River. In another legend surrounding the origin of the river, Shiva brought the goddess Ganga to Gujarat and that caused the Sabarmati to come into being.',
-      'gu':
-          'હિંદુ ધર્મમાં મહત્વ\nરાજસ્થાનમાં, એવું માનવામાં આવે છે કે માઉન્ટ આબુ પર તપસ્વી કશ્યપની તપસ્યાને કારણે સાબરમતી નદીની ઉત્પત્તિ થઈ હતી. તેમની તપસ્યાથી શિવ પ્રસન્ન થયા અને બદલામાં શિવે તપસ્વી કશ્યપને ગંગા નદી આપી. ગંગા નદી શિવના વાળમાંથી માઉન્ટ આબુ પર વહેતી થઈ અને સાબરમતી નદી બની. નદીની ઉત્પત્તિની આસપાસના અન્ય દંતકથામાં, શિવ દેવી ગંગાને ગુજરાતમાં લાવ્યા અને તેના કારણે સાબરમતી અસ્તિત્વમાં આવી.',
-      'hi':
-          'हिंदू धर्म में महत्व\nराजस्थान में यह माना जाता है कि साबरमती नदी का उद्गम माउंट आबू पर तपस्वी कश्यप की तपस्या से हुआ था। उनकी तपस्या से शिव प्रसन्न हुए और बदले में शिव ने तपस्वी कश्यप को गंगा नदी दी। गंगा नदी शिव की जटाओं से निकलकर माउंट आबू तक पहुंची और साबरमती नदी बन गई। नदी की उत्पत्ति के बारे में एक अन्य किंवदंती के अनुसार, शिव देवी गंगा को गुजरात ले आए और इससे साबरमती अस्तित्व में आई।',
+      'gu': '',
+      'hi': '',
     },
-    '8mk8lv06': {
+    '1a9hgp7l': {
       'en': 'Back to home page',
-      'gu': 'હોમ પેજ પર પાછા ફરો',
-      'hi': 'मुखपृष्ठ पर वापस',
+      'gu': '',
+      'hi': '',
     },
     'csjvw37t': {
       'en': 'Home',
@@ -500,55 +469,55 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // MoreInfo
   {
-    'a4rz768d': {
+    'ymgrpmok': {
       'en': 'Water Management',
-      'gu': 'પાણી વ્યવસ્થાપન',
-      'hi': 'जल प्रबंधन',
+      'gu': '',
+      'hi': '',
     },
-    'w5o9eqnz': {
+    'zqzw5umq': {
       'en': '45%  Irrigation',
-      'gu': '45% સિંચાઈ',
-      'hi': '45% सिंचाई',
+      'gu': '',
+      'hi': '',
     },
-    'n2eler13': {
+    'qyqcrldr': {
       'en': '25% Industrial Use',
-      'gu': '25% ઔદ્યોગિક ઉપયોગ',
-      'hi': '25% औद्योगिक उपयोग',
+      'gu': '',
+      'hi': '',
     },
-    'v18n52q9': {
+    'zxfb8jpu': {
       'en': '20% Drinking ',
-      'gu': '20% પીવું',
-      'hi': '20% शराब पीना',
+      'gu': '',
+      'hi': '',
     },
-    'apxhgae9': {
+    'jf40ytzp': {
       'en': '10% Others',
-      'gu': '10% અન્ય',
-      'hi': '10% अन्य',
+      'gu': '',
+      'hi': '',
     },
-    '74nwg18g': {
+    'c3mfp6xe': {
       'en': 'Climate Chnage Impact',
-      'gu': 'ક્લાઈમેટ ચેન્જ ઈમ્પેક્ટ',
-      'hi': 'जलवायु परिवर्तन का प्रभाव',
+      'gu': '',
+      'hi': '',
     },
-    'v4kp6fbj': {
+    '8mwxp7su': {
       'en': 'Biodiversity Conservation',
-      'gu': 'જૈવવિવિધતા સંરક્ષણ',
-      'hi': 'जैव विविधता संरक्षण',
+      'gu': '',
+      'hi': '',
     },
-    'wfq9yc6q': {
+    'bxvncu0x': {
       'en': 'Navigation & Transportation',
-      'gu': 'નેવિગેશન અને ટ્રાન્સપોર્ટેશન',
-      'hi': 'नेविगेशन एवं परिवहन',
+      'gu': '',
+      'hi': '',
     },
-    '6a0ls7pb': {
+    't1m7abdp': {
       'en': 'Land Use Guidance',
-      'gu': 'જમીન ઉપયોગ માર્ગદર્શન',
-      'hi': 'भूमि उपयोग मार्गदर्शन',
+      'gu': '',
+      'hi': '',
     },
-    'jyhlof26': {
+    '3eitic8a': {
       'en': 'Scientific Research',
-      'gu': 'વૈજ્ઞાનિક સંશોધન',
-      'hi': 'वैज्ञानिक अनुसंधान',
+      'gu': '',
+      'hi': '',
     },
     'u1pqo02s': {
       'en': 'Home',
@@ -577,19 +546,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': 'घर',
     },
   },
-  // AlertPage
-  {
-    '98gvuz3d': {
-      'en': 'Page Title',
-      'gu': 'પૃષ્ઠ શીર્ષક',
-      'hi': 'पृष्ठ का शीर्षक',
-    },
-    'dsbto680': {
-      'en': 'Home',
-      'gu': 'ઘર',
-      'hi': 'घर',
-    },
-  },
   // PrivacyPolicy
   {
     'tamh4pl6': {
@@ -600,13 +556,255 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // WeatherPage
   {
+    'scxljd9n': {
+      'en': 'Sabaramati River',
+      'gu': '',
+      'hi': '',
+    },
+    'gqld5hfm': {
+      'en': 'Temp',
+      'gu': '',
+      'hi': '',
+    },
+    'syvo4cnw': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
+    'a529f87c': {
+      'en': 'Feels Like ',
+      'gu': '',
+      'hi': '',
+    },
+    'hntms0ay': {
+      'en': ' kmph',
+      'gu': '',
+      'hi': '',
+    },
+    'bgz2td77': {
+      'en': 'Wind',
+      'gu': '',
+      'hi': '',
+    },
+    'a05yhq0w': {
+      'en': 'hpa',
+      'gu': '',
+      'hi': '',
+    },
+    'cdw2ej3l': {
+      'en': 'Pressure',
+      'gu': '',
+      'hi': '',
+    },
+    'yljo17d8': {
+      'en': '120',
+      'gu': '',
+      'hi': '',
+    },
+    'jp6rons8': {
+      'en': 'aqi/Poor',
+      'gu': '',
+      'hi': '',
+    },
+    'r258r82m': {
+      'en': 'Air Quality',
+      'gu': '',
+      'hi': '',
+    },
+    'w6tu52hy': {
+      'en': '%',
+      'gu': '',
+      'hi': '',
+    },
+    'vn9zr05e': {
+      'en': 'Humidity',
+      'gu': '',
+      'hi': '',
+    },
+    '0m8m72io': {
+      'en': 'Today\'s Forecast',
+      'gu': '',
+      'hi': '',
+    },
+    '0yq3j6ak': {
+      'en': 'Low Temperature',
+      'gu': '',
+      'hi': '',
+    },
+    'dr1rqtsu': {
+      'en': 'High Temperature',
+      'gu': '',
+      'hi': '',
+    },
+    'sen00ow3': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
+    'atgctwfs': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
+    'hqx5hwds': {
+      'en': 'Sunrise & Sunset',
+      'gu': '',
+      'hi': '',
+    },
+    'pmoju7kb': {
+      'en': 'Sunrise',
+      'gu': '',
+      'hi': '',
+    },
+    'b148dvm6': {
+      'en': '6:59 AM',
+      'gu': '',
+      'hi': '',
+    },
+    '17ur9e59': {
+      'en': 'Sunset',
+      'gu': '',
+      'hi': '',
+    },
+    'aj3wf5zg': {
+      'en': '5:53 PM',
+      'gu': '',
+      'hi': '',
+    },
+    '9329g0ml': {
+      'en': 'Upcoming Days Forecast',
+      'gu': '',
+      'hi': '',
+    },
+    '7zuyso4w': {
+      'en': 'Tomorrow\'s Forecast',
+      'gu': '',
+      'hi': '',
+    },
+    'wjoaqsc6': {
+      'en': '29',
+      'gu': '',
+      'hi': '',
+    },
+    '01gfdvo4': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
+    'okjzz8gb': {
+      'en': '/',
+      'gu': '',
+      'hi': '',
+    },
+    'un2t1dwu': {
+      'en': '26',
+      'gu': '',
+      'hi': '',
+    },
+    'rzaqrgk0': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
+    'zslrx0sb': {
+      'en': 'Day 3',
+      'gu': '',
+      'hi': '',
+    },
+    '3ydt01lh': {
+      'en': '29',
+      'gu': '',
+      'hi': '',
+    },
+    'sd734qmf': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
+    'wckear3v': {
+      'en': '/',
+      'gu': '',
+      'hi': '',
+    },
+    '565orn10': {
+      'en': '29',
+      'gu': '',
+      'hi': '',
+    },
+    'k0672gu0': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
+    'yaxf1qre': {
+      'en': 'Day 4',
+      'gu': '',
+      'hi': '',
+    },
+    'k8qs7zst': {
+      'en': '29',
+      'gu': '',
+      'hi': '',
+    },
+    'aan8u0zt': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
+    '76lh4334': {
+      'en': '/',
+      'gu': '',
+      'hi': '',
+    },
+    'yw66byhk': {
+      'en': '29',
+      'gu': '',
+      'hi': '',
+    },
+    'h9kb2oi3': {
+      'en': '°C',
+      'gu': '',
+      'hi': '',
+    },
     '4tbswzxt': {
       'en': 'Home',
       'gu': '',
       'hi': '',
     },
   },
-  // HISTORY
+  // ClimateChangePage
+  {
+    '2uycku8b': {
+      'en': 'Home',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // BiodiversityPage
+  {
+    '9pcc4mn6': {
+      'en': 'Home',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // LandUsePage
+  {
+    '3ax76c7s': {
+      'en': 'Home',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // TnSPage
+  {
+    '1nhmt01s': {
+      'en': 'Home',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // HistoryCompo
   {
     'yopjgo5l': {
       'en': 'History Of River',
@@ -625,9 +823,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Significance in Hinduism\nIn Rajasthan, it is believed that the Sabarmati River originated due to the penance of ascetic Kashyapa on Mount Abu. His penance had pleased Shiva and in return, Shiva gave ascetic Kashyapa the Ganges River. The Ganges River flowed from Shiva\'s hair onto Mount Abu and became the Sabarmati River. In another legend surrounding the origin of the river, Shiva brought the goddess Ganga to Gujarat and that caused the Sabarmati to come into being.',
       'gu':
-          'હિંદુ ધર્મમાં મહત્વ\nરાજસ્થાનમાં, એવું માનવામાં આવે છે કે માઉન્ટ આબુ પર તપસ્વી કશ્યપની તપસ્યાને કારણે સાબરમતી નદીની ઉત્પત્તિ થઈ હતી. તેમની તપસ્યાથી શિવ પ્રસન્ન થયા અને બદલામાં શિવે તપસ્વી કશ્યપને ગંગા નદી આપી. ગંગા નદી શિવના વાળમાંથી માઉન્ટ આબુ પર વહેતી થઈ અને સાબરમતી નદી બની. નદીની ઉત્પત્તિની આસપાસના અન્ય દંતકથામાં, શિવ દેવી ગંગાને ગુજરાતમાં લાવ્યા અને તેના કારણે સાબરમતી અસ્તિત્વમાં આવી.',
+          'હિન્દુ ધર્મમાં મહત્વ\nરાજસ્થાનમાં, એવું માનવામાં આવે છે કે માઉન્ટ આબુ પર તપસ્વી કશ્યપની તપસ્યાને કારણે સાબરમતી નદીની ઉત્પત્તિ થઈ હતી. તેમની તપસ્યાથી શિવ પ્રસન્ન થયા અને બદલામાં શિવે તપસ્વી કશ્યપને ગંગા નદી આપી. ગંગા નદી શિવના વાળમાંથી માઉન્ટ આબુ પર વહેતી થઈ અને સાબરમતી નદી બની. નદીની ઉત્પત્તિની આસપાસના અન્ય દંતકથામાં, શિવ દેવી ગંગાને ગુજરાતમાં લાવ્યા અને તેના કારણે સાબરમતી અસ્તિત્વમાં આવી.',
       'hi':
-          'हिंदू धर्म में महत्व\nराजस्थान में यह माना जाता है कि साबरमती नदी का उद्गम माउंट आबू पर तपस्वी कश्यप की तपस्या से हुआ था। उनकी तपस्या से शिव प्रसन्न हुए और बदले में शिव ने तपस्वी कश्यप को गंगा नदी दी। गंगा नदी शिव की जटाओं से निकलकर माउंट आबू तक पहुंची और साबरमती नदी बन गई। नदी की उत्पत्ति के बारे में एक अन्य किंवदंती के अनुसार, शिव देवी गंगा को गुजरात ले आए और इससे साबरमती अस्तित्व में आई।',
+          'हिंदू धर्म में महत्व\nराजस्थान में ऐसा माना जाता है कि साबरमती नदी का उद्गम माउंट आबू पर तपस्वी कश्यप की तपस्या से हुआ था। उनकी तपस्या से शिव प्रसन्न हुए और बदले में शिव ने तपस्वी कश्यप को गंगा नदी दी। गंगा नदी शिव की जटाओं से निकलकर माउंट आबू तक पहुंची और साबरमती नदी बन गई। नदी की उत्पत्ति के बारे में एक अन्य किंवदंती के अनुसार, शिव देवी गंगा को गुजरात ले आए और इससे साबरमती अस्तित्व में आई।',
     },
     'jzaevzy0': {
       'en': 'Close',
@@ -648,19 +846,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': 'साबरमती नदी के पास',
     },
   },
-  // Biodiversity
-  {
-    '6e8s8ub6': {
-      'en': 'Biodiversity Conservation',
-      'gu': 'જૈવવિવિધતા સંરક્ષણ',
-      'hi': 'जैव विविधता संरक्षण',
-    },
-    'sbi6aous': {
-      'en': 'Here we add all info about Bio Con',
-      'gu': 'અહીં અમે Bio Con વિશે તમામ માહિતી ઉમેરીએ છીએ',
-      'hi': 'यहां हम बायो कॉन के बारे में सारी जानकारी जोड़ते हैं',
-    },
-  },
   // ProfileEdit
   {
     'o09vbelc': {
@@ -679,7 +864,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': 'बचाना',
     },
   },
-  // PrivacyPOlicy
+  // PrivacyPlicy
   {
     '1lnjwgrv': {
       'en': 'Main Header',
@@ -693,10 +878,175 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': '',
     },
   },
+  // AlertCompo
+  {
+    'w0opizvc': {
+      'en': 'Cancel',
+      'gu': '',
+      'hi': '',
+    },
+    '5nhkly50': {
+      'en': 'More Details',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // weatherinfoCopy
+  {
+    '7lth9hrt': {
+      'en': '147',
+      'gu': '',
+      'hi': '',
+    },
+    'wv4ux6ga': {
+      'en': ' kmph',
+      'gu': '',
+      'hi': '',
+    },
+    'x01t8b9z': {
+      'en': 'Wind',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // ClimateCompo
+  {
+    'nqrnic5l': {
+      'en': '\"Effect of climate on Sabarmati River\"',
+      'gu': '',
+      'hi': '',
+    },
+    'nvbawtaa': {
+      'en':
+          '\"It originates in the Aravalli Range of the Udaipur District of Rajasthan and meets the Gulf of Khambhat of Arabian Sea after travelling 371 km (231 mi) in a south-westerly direction across Rajasthan and Gujarat\"',
+      'gu': '',
+      'hi': '',
+    },
+    'xsuakaiy': {
+      'en': 'caption',
+      'gu': '',
+      'hi': '',
+    },
+    'lfqmfykk': {
+      'en':
+          '\"It originates in the Aravalli Range of the Udaipur District of Rajasthan and meets the Gulf of Khambhat of Arabian Sea after travelling 371 km (231 mi) in a south-westerly direction across Rajasthan and Gujarat\"',
+      'gu': '',
+      'hi': '',
+    },
+    '8syz9mm6': {
+      'en': 'caption',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // BiodiversityCompo
+  {
+    '0mbnaofq': {
+      'en': '•\tTrees',
+      'gu': '',
+      'hi': '',
+    },
+    'pw2046m2': {
+      'en':
+          'The Sabarmati River Basin is home to a variety of trees, including teak, sandalwood, and mango. These trees provide important habitat for wildlife and help to regulate the local climate.',
+      'gu': '',
+      'hi': '',
+    },
+    'no7rq5ou': {
+      'en': 'Sandalwood tree, Sabarmati River Basin',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // BiodiversityTips
+  {
+    'ym29kqpi': {
+      'en': '\"Effect of climate on Sabarmati River\"',
+      'gu': '',
+      'hi': '',
+    },
+    '630vewyi': {
+      'en':
+          '\"It originates in the Aravalli Range of the Udaipur District of Rajasthan and meets the Gulf of Khambhat of Arabian Sea after travelling 371 km (231 mi) in a south-westerly direction across Rajasthan and Gujarat\"',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // TnSCompo
+  {
+    'jimzmjmn': {
+      'en': '\"Effect of climate on Sabarmati River\"',
+      'gu': '',
+      'hi': '',
+    },
+    'mx9ucea6': {
+      'en':
+          '\"It originates in the Aravalli Range of the Udaipur District of Rajasthan and meets the Gulf of Khambhat of Arabian Sea after travelling 371 km (231 mi) in a south-westerly direction across Rajasthan and Gujarat\"',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // LandUseCompeCompo
+  {
+    'jg41ewr9': {
+      'en': '\"Effect of climate on Sabarmati River\"',
+      'gu': '',
+      'hi': '',
+    },
+    'ekq1wzbm': {
+      'en':
+          '\"It originates in the Aravalli Range of the Udaipur District of Rajasthan and meets the Gulf of Khambhat of Arabian Sea after travelling 371 km (231 mi) in a south-westerly direction across Rajasthan and Gujarat\"',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // LandUseImpactCompo
+  {
+    'yx76hqit': {
+      'en': '\"Effect of climate on Sabarmati River\"',
+      'gu': '',
+      'hi': '',
+    },
+    'egs0f6h8': {
+      'en':
+          '\"It originates in the Aravalli Range of the Udaipur District of Rajasthan and meets the Gulf of Khambhat of Arabian Sea after travelling 371 km (231 mi) in a south-westerly direction across Rajasthan and Gujarat\"',
+      'gu': '',
+      'hi': '',
+    },
+  },
+  // LandUseDataCompo
+  {
+    'rok1x5y2': {
+      'en': '\"Effect of climate on Sabarmati River\"',
+      'gu': '',
+      'hi': '',
+    },
+    '7n49aihf': {
+      'en':
+          '\"It originates in the Aravalli Range of the Udaipur District of Rajasthan and meets the Gulf of Khambhat of Arabian Sea after travelling 371 km (231 mi) in a south-westerly direction across Rajasthan and Gujarat\"',
+      'gu': '',
+      'hi': '',
+    },
+  },
   // Miscellaneous
   {
+    'hdxy2rb3': {
+      'en': '{FieldName}',
+      'gu': 'નામ',
+      'hi': 'नाम',
+    },
     'y74kna8q': {
       'en': 'Allow Us To Notify You About Emergency ',
+      'gu': '',
+      'hi': '',
+    },
+    'uzb8dkm4': {
+      'en': 'Allow us to call API',
+      'gu': '',
+      'hi': '',
+    },
+    '2w47oma9': {
+      'en': 'Allow us to locate youu',
       'gu': '',
       'hi': '',
     },

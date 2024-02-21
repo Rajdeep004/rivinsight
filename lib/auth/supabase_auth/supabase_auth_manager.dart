@@ -5,12 +5,14 @@ import '/auth/auth_manager.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'email_auth.dart';
+import 'google_auth.dart';
 import 'supabase_user_provider.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export '/auth/base_auth_user_provider.dart';
 
-class SupabaseAuthManager extends AuthManager with EmailSignInManager {
+class SupabaseAuthManager extends AuthManager
+    with EmailSignInManager, GoogleSignInManager {
   @override
   Future signOut() {
     return SupaFlow.client.auth.signOut();
@@ -96,6 +98,10 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
         () => emailCreateAccountFunc(email, password),
       );
 
+  @override
+  Future<BaseAuthUser?> signInWithGoogle(BuildContext context) =>
+      _signInOrCreateAccount(context, googleSignInFunc);
+
   /// Tries to sign in or create an account using Firebase Auth.
   /// Returns the User object if sign in was successful.
   Future<BaseAuthUser?> _signInOrCreateAccount(
@@ -116,9 +122,12 @@ class SupabaseAuthManager extends AuthManager with EmailSignInManager {
       }
       return authUser;
     } on AuthException catch (e) {
+      final errorMsg = e.message.contains('User already registered') ?? false
+          ? 'Error: The email is already in use by a different account'
+          : 'Error: ${e.message!}';
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: ${e.message!}')),
+        SnackBar(content: Text(errorMsg)),
       );
       return null;
     }

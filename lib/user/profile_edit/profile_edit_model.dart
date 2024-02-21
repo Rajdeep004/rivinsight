@@ -21,8 +21,10 @@ class ProfileEditModel extends FlutterFlowModel<ProfileEditWidget> {
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {}
 
+  @override
   void dispose() {
     displayNameFocusNode?.dispose();
     displayNameController?.dispose();

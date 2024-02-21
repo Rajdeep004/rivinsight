@@ -28,7 +28,17 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
-	<array>        <dict>
+	<array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.19202180327-8h3ek1raveim86dafti3m06t7k1eu3pd</string>
+            </array>
+        </dict>
+
+        <dict>
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
@@ -51,6 +61,8 @@
 
 	<key>PermissionGroupNotification</key>
     <string>Allow Us To Notify You About Emergency </string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>Allow us to locate youu</string>
 
 
 	<key>UILaunchStoryboardName</key>

@@ -3,12 +3,12 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbar/appbar_widget.dart';
+import '/user/alert_compo/alert_compo_widget.dart';
+import '/user/app_bar/app_bar_widget.dart';
 import '/user/weatherinfo/weatherinfo_widget.dart';
 import '/flutter_flow/permissions_util.dart';
 import 'dart:async';
 import 'home_page_widget.dart' show HomePageWidget;
-import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -20,22 +20,29 @@ import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 
 class HomePageModel extends FlutterFlowModel<HomePageWidget> {
+  ///  Local state fields for this page.
+
+  String floodRisk = '';
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  Completer<List<RiversRow>>? requestCompleter;
-  // Model for APPBAR component.
-  late AppbarModel appbarModel;
+  bool requestCompleted = false;
+  String? requestLastUniqueKey;
+  // Model for AppBar component.
+  late AppBarModel appBarModel;
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
-    appbarModel = createModel(context, () => AppbarModel());
+    appBarModel = createModel(context, () => AppBarModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
-    appbarModel.dispose();
+    appBarModel.dispose();
   }
 
   /// Action blocks are added here.
@@ -50,7 +57,7 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
     while (true) {
       await Future.delayed(Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
-      final requestComplete = requestCompleter?.isCompleted ?? false;
+      final requestComplete = requestCompleted;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {
         break;
       }

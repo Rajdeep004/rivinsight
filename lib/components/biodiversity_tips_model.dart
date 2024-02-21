@@ -1,25 +1,20 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'alert_page_widget.dart' show AlertPageWidget;
+import 'biodiversity_tips_widget.dart' show BiodiversityTipsWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class AlertPageModel extends FlutterFlowModel<AlertPageWidget> {
-  ///  State fields for stateful widgets in this page.
-
-  final unfocusNode = FocusNode();
-
+class BiodiversityTipsModel extends FlutterFlowModel<BiodiversityTipsWidget> {
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {}
 
-  void dispose() {
-    unfocusNode.dispose();
-  }
+  @override
+  void dispose() {}
 
   /// Action blocks are added here.
 

@@ -3,7 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbar/appbar_widget.dart';
+import '/user/app_bar/app_bar_widget.dart';
 import '/user/water_conserv/water_conserv_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -16,10 +16,10 @@ import 'water_tips_model.dart';
 export 'water_tips_model.dart';
 
 class WaterTipsWidget extends StatefulWidget {
-  const WaterTipsWidget({Key? key}) : super(key: key);
+  const WaterTipsWidget({super.key});
 
   @override
-  _WaterTipsWidgetState createState() => _WaterTipsWidgetState();
+  State<WaterTipsWidget> createState() => _WaterTipsWidgetState();
 }
 
 class _WaterTipsWidgetState extends State<WaterTipsWidget>
@@ -74,82 +74,86 @@ class _WaterTipsWidgetState extends State<WaterTipsWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: Column(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Stack(
           children: [
-            wrapWithModel(
-              model: _model.appbarModel,
-              updateCallback: () => setState(() {}),
-              child: AppbarWidget(),
-            ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-              child: Text(
-                FFLocalizations.of(context).getText(
-                  'y0x5ytnr' /* Water Conservation Tips */,
-                ),
-                style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily: 'Outfit',
-                      fontWeight: FontWeight.bold,
-                    ),
-              ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
-            ),
-            Container(
-              width: double.infinity,
-              height: 598.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).secondaryBackground,
-              ),
-              child: FutureBuilder<List<WCtipsRow>>(
-                future: WCtipsTable().queryRows(
-                  queryFn: (q) => q.order('id', ascending: true),
-                ),
-                builder: (context, snapshot) {
-                  // Customize what your widget looks like when it's loading.
-                  if (!snapshot.hasData) {
-                    return Center(
-                      child: SizedBox(
-                        width: 50.0,
-                        height: 50.0,
-                        child: SpinKitRipple(
-                          color: FlutterFlowTheme.of(context).primary,
-                          size: 50.0,
-                        ),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 90.0, 0.0, 60.0),
+              child: ListView(
+                padding: EdgeInsets.zero,
+                scrollDirection: Axis.vertical,
+                children: [
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      FFLocalizations.of(context).getText(
+                        'y0x5ytnr' /* Water Conservation Tips */,
                       ),
-                    );
-                  }
-                  List<WCtipsRow> listViewWCtipsRowList = snapshot.data!;
-                  return ListView.builder(
-                    padding: EdgeInsets.zero,
-                    scrollDirection: Axis.vertical,
-                    itemCount: listViewWCtipsRowList.length,
-                    itemBuilder: (context, listViewIndex) {
-                      final listViewWCtipsRow =
-                          listViewWCtipsRowList[listViewIndex];
-                      return Container(
-                        height: 378.0,
-                        decoration: BoxDecoration(),
-                        child: wrapWithModel(
-                          model: _model.waterConservModels.getModel(
-                            listViewWCtipsRow.id.toString(),
-                            listViewIndex,
-                          ),
-                          updateCallback: () => setState(() {}),
-                          child: WaterConservWidget(
-                            key: Key(
-                              'Keyy3o_${listViewWCtipsRow.id.toString()}',
+                      style:
+                          FlutterFlowTheme.of(context).headlineMedium.override(
+                                fontFamily: 'Outfit',
+                                fontWeight: FontWeight.bold,
+                              ),
+                    ).animateOnPageLoad(
+                        animationsMap['textOnPageLoadAnimation']!),
+                  ),
+                  FutureBuilder<List<WCtipsRow>>(
+                    future: WCtipsTable().queryRows(
+                      queryFn: (q) => q.order('id', ascending: true),
+                    ),
+                    builder: (context, snapshot) {
+                      // Customize what your widget looks like when it's loading.
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: SizedBox(
+                            width: 50.0,
+                            height: 50.0,
+                            child: SpinKitRipple(
+                              color: FlutterFlowTheme.of(context).primary,
+                              size: 50.0,
                             ),
-                            content: listViewWCtipsRow.content!,
-                            image: listViewWCtipsRow.image!,
-                            id: listViewWCtipsRow.id,
                           ),
-                        ),
+                        );
+                      }
+                      List<WCtipsRow> listViewWCtipsRowList = snapshot.data!;
+                      return ListView.builder(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        scrollDirection: Axis.vertical,
+                        itemCount: listViewWCtipsRowList.length,
+                        itemBuilder: (context, listViewIndex) {
+                          final listViewWCtipsRow =
+                              listViewWCtipsRowList[listViewIndex];
+                          return Container(
+                            height: 378.0,
+                            decoration: BoxDecoration(),
+                            child: wrapWithModel(
+                              model: _model.waterConservModels.getModel(
+                                listViewWCtipsRow.id.toString(),
+                                listViewIndex,
+                              ),
+                              updateCallback: () => setState(() {}),
+                              child: WaterConservWidget(
+                                key: Key(
+                                  'Keyy3o_${listViewWCtipsRow.id.toString()}',
+                                ),
+                                content: listViewWCtipsRow.content!,
+                                image: listViewWCtipsRow.image!,
+                                id: listViewWCtipsRow.id,
+                              ),
+                            ),
+                          );
+                        },
                       );
                     },
-                  );
-                },
+                  ),
+                ],
               ),
+            ),
+            wrapWithModel(
+              model: _model.appBarModel,
+              updateCallback: () => setState(() {}),
+              child: AppBarWidget(),
             ),
           ],
         ),

@@ -5,18 +5,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'appbar_model.dart';
-export 'appbar_model.dart';
+import 'app_bar_model.dart';
+export 'app_bar_model.dart';
 
-class AppbarWidget extends StatefulWidget {
-  const AppbarWidget({Key? key}) : super(key: key);
+class AppBarWidget extends StatefulWidget {
+  const AppBarWidget({super.key});
 
   @override
-  _AppbarWidgetState createState() => _AppbarWidgetState();
+  State<AppBarWidget> createState() => _AppBarWidgetState();
 }
 
-class _AppbarWidgetState extends State<AppbarWidget> {
-  late AppbarModel _model;
+class _AppBarWidgetState extends State<AppBarWidget> {
+  late AppBarModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -27,7 +27,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AppbarModel());
+    _model = createModel(context, () => AppBarModel());
   }
 
   @override
@@ -71,7 +71,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(-1.00, 1.00),
+                    alignment: AlignmentDirectional(-1.0, 1.0),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),

@@ -2,7 +2,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbar/appbar_widget.dart';
+import '/user/app_bar/app_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -14,10 +14,10 @@ import 'detailed_view_model.dart';
 export 'detailed_view_model.dart';
 
 class DetailedViewWidget extends StatefulWidget {
-  const DetailedViewWidget({Key? key}) : super(key: key);
+  const DetailedViewWidget({super.key});
 
   @override
-  _DetailedViewWidgetState createState() => _DetailedViewWidgetState();
+  State<DetailedViewWidget> createState() => _DetailedViewWidgetState();
 }
 
 class _DetailedViewWidgetState extends State<DetailedViewWidget>
@@ -62,9 +62,9 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             wrapWithModel(
-              model: _model.appbarModel,
+              model: _model.appBarModel,
               updateCallback: () => setState(() {}),
-              child: AppbarWidget(),
+              child: AppBarWidget(),
             ),
             Expanded(
               child: Padding(
@@ -90,8 +90,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -129,8 +128,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -161,8 +159,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -200,8 +197,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -232,8 +228,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -271,8 +266,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -303,8 +297,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -342,8 +335,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -374,8 +366,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -413,8 +404,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -445,8 +435,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -484,8 +473,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -516,8 +504,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -555,8 +542,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -587,8 +573,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -626,8 +611,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)
@@ -658,8 +642,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              8.0, 8.0, 8.0, 8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -697,8 +680,7 @@ class _DetailedViewWidgetState extends State<DetailedViewWidget>
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      4.0, 4.0, 4.0, 4.0),
+                                  padding: EdgeInsets.all(4.0),
                                   child: Icon(
                                     Icons.keyboard_arrow_right_rounded,
                                     color: FlutterFlowTheme.of(context)

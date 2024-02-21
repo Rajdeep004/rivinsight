@@ -13,10 +13,10 @@ import 'auth_page_model.dart';
 export 'auth_page_model.dart';
 
 class AuthPageWidget extends StatefulWidget {
-  const AuthPageWidget({Key? key}) : super(key: key);
+  const AuthPageWidget({super.key});
 
   @override
-  _AuthPageWidgetState createState() => _AuthPageWidgetState();
+  State<AuthPageWidget> createState() => _AuthPageWidgetState();
 }
 
 class _AuthPageWidgetState extends State<AuthPageWidget>
@@ -85,7 +85,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.00, -1.00),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
@@ -117,8 +117,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                   ),
                           unselectedLabelStyle: TextStyle(),
                           indicatorColor: FlutterFlowTheme.of(context).primary,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              4.0, 4.0, 4.0, 4.0),
+                          padding: EdgeInsets.all(4.0),
                           tabs: [
                             Tab(
                               text: FFLocalizations.of(context).getText(
@@ -132,6 +131,9 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                             ),
                           ],
                           controller: _model.tabBarController,
+                          onTap: (i) async {
+                            [() async {}, () async {}][i]();
+                          },
                         ),
                       ),
                       Expanded(
@@ -210,9 +212,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 24.0, 24.0, 24.0),
+                                          contentPadding: EdgeInsets.all(24.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
@@ -287,9 +287,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 24.0, 24.0, 24.0),
+                                          contentPadding: EdgeInsets.all(24.0),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model.passwordVisibility =
@@ -318,7 +316,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.00, 0.00),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 0.0),
@@ -337,7 +335,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                             return;
                                           }
 
-                                          context.pushNamedAuth(
+                                          context.goNamedAuth(
                                               'HomePage', context.mounted);
                                         },
                                         text:
@@ -376,7 +374,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.00, 0.00),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 16.0),
@@ -415,7 +413,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.00, 0.00),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 16.0, 25.0),
@@ -429,47 +427,42 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 16.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () async {
-                                        context.pushNamed('HomePage');
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        'id912ne2' /* Continue with Google */,
-                                      ),
-                                      icon: FaIcon(
-                                        FontAwesomeIcons.google,
-                                        size: 20.0,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 230.0,
-                                        height: 44.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
+                                  FFButtonWidget(
+                                    onPressed: () {
+                                      print('Button pressed ...');
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'id912ne2' /* Continue with Google */,
+                                    ),
+                                    icon: FaIcon(
+                                      FontAwesomeIcons.google,
+                                      size: 20.0,
+                                    ),
+                                    options: FFButtonOptions(
+                                      width: 230.0,
+                                      height: 44.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                      elevation: 0.0,
+                                      borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                        elevation: 0.0,
-                                        borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
-                                          width: 2.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(40.0),
-                                        hoverColor: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
+                                            .alternate,
+                                        width: 2.0,
                                       ),
+                                      borderRadius: BorderRadius.circular(40.0),
+                                      hoverColor: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
                                     ),
                                   ),
                                 ],
@@ -495,7 +488,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                         decoration: InputDecoration(
                                           labelText: FFLocalizations.of(context)
                                               .getText(
-                                            'hdxy2rb3' /* Name */,
+                                            'vzns9vyv' /* Name */,
                                           ),
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
@@ -543,9 +536,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 24.0, 24.0, 24.0),
+                                          contentPadding: EdgeInsets.all(24.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
@@ -620,9 +611,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 24.0, 24.0, 24.0),
+                                          contentPadding: EdgeInsets.all(24.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
@@ -698,9 +687,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 24.0, 24.0, 24.0),
+                                          contentPadding: EdgeInsets.all(24.0),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model
@@ -794,9 +781,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
-                                          contentPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 24.0, 24.0, 24.0),
+                                          contentPadding: EdgeInsets.all(24.0),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model
@@ -828,7 +813,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.00, 0.00),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 16.0),
@@ -869,7 +854,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget>
                                             'id': currentUserUid,
                                           });
 
-                                          context.pushNamedAuth(
+                                          context.goNamedAuth(
                                               'HomePage', context.mounted);
                                         },
                                         text:

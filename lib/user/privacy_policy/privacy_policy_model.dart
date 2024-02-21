@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/user/appbar/appbar_widget.dart';
-import '/user/privacy_p_olicy/privacy_p_olicy_widget.dart';
+import '/user/app_bar/app_bar_widget.dart';
+import '/user/privacy_plicy/privacy_plicy_widget.dart';
 import 'privacy_policy_widget.dart' show PrivacyPolicyWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,22 +14,24 @@ class PrivacyPolicyModel extends FlutterFlowModel<PrivacyPolicyWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Model for APPBAR component.
-  late AppbarModel appbarModel;
-  // Model for PrivacyPOlicy component.
-  late PrivacyPOlicyModel privacyPOlicyModel;
+  // Model for AppBar component.
+  late AppBarModel appBarModel;
+  // Model for PrivacyPlicy component.
+  late PrivacyPlicyModel privacyPlicyModel;
 
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {
-    appbarModel = createModel(context, () => AppbarModel());
-    privacyPOlicyModel = createModel(context, () => PrivacyPOlicyModel());
+    appBarModel = createModel(context, () => AppBarModel());
+    privacyPlicyModel = createModel(context, () => PrivacyPlicyModel());
   }
 
+  @override
   void dispose() {
     unfocusNode.dispose();
-    appbarModel.dispose();
-    privacyPOlicyModel.dispose();
+    appBarModel.dispose();
+    privacyPlicyModel.dispose();
   }
 
   /// Action blocks are added here.

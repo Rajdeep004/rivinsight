@@ -6,18 +6,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'history_model.dart';
-export 'history_model.dart';
+import 'history_compo_model.dart';
+export 'history_compo_model.dart';
 
-class HistoryWidget extends StatefulWidget {
-  const HistoryWidget({Key? key}) : super(key: key);
+class HistoryCompoWidget extends StatefulWidget {
+  const HistoryCompoWidget({super.key});
 
   @override
-  _HistoryWidgetState createState() => _HistoryWidgetState();
+  State<HistoryCompoWidget> createState() => _HistoryCompoWidgetState();
 }
 
-class _HistoryWidgetState extends State<HistoryWidget> {
-  late HistoryModel _model;
+class _HistoryCompoWidgetState extends State<HistoryCompoWidget> {
+  late HistoryCompoModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -28,7 +28,7 @@ class _HistoryWidgetState extends State<HistoryWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HistoryModel());
+    _model = createModel(context, () => HistoryCompoModel());
   }
 
   @override
@@ -41,7 +41,7 @@ class _HistoryWidgetState extends State<HistoryWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+      padding: EdgeInsets.all(10.0),
       child: Container(
         width: double.infinity,
         height: 480.0,
@@ -63,7 +63,7 @@ class _HistoryWidgetState extends State<HistoryWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(-1.00, 0.00),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 0.0, 0.0),

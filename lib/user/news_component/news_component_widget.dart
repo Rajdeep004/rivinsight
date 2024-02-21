@@ -14,20 +14,22 @@ export 'news_component_model.dart';
 
 class NewsComponentWidget extends StatefulWidget {
   const NewsComponentWidget({
-    Key? key,
+    super.key,
     this.title,
     this.descripton,
     this.imageURL,
     required this.createAt,
-  }) : super(key: key);
+    required this.author,
+  });
 
   final String? title;
   final String? descripton;
   final String? imageURL;
   final DateTime? createAt;
+  final String? author;
 
   @override
-  _NewsComponentWidgetState createState() => _NewsComponentWidgetState();
+  State<NewsComponentWidget> createState() => _NewsComponentWidgetState();
 }
 
 class _NewsComponentWidgetState extends State<NewsComponentWidget>
@@ -74,7 +76,7 @@ class _NewsComponentWidgetState extends State<NewsComponentWidget>
       mainAxisSize: MainAxisSize.max,
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+          padding: EdgeInsets.all(10.0),
           child: Container(
             width: double.infinity,
             height: 510.0,
@@ -127,10 +129,9 @@ class _NewsComponentWidgetState extends State<NewsComponentWidget>
                     ),
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(-1.00, -1.00),
+                    alignment: AlignmentDirectional(-1.0, -1.0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          10.0, 10.0, 10.0, 10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -151,10 +152,28 @@ class _NewsComponentWidgetState extends State<NewsComponentWidget>
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(1.00, 1.00),
+                              alignment: AlignmentDirectional(1.0, 1.0),
+                              child: Text(
+                                widget.author!,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodySmall
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 10.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(1.0, 1.0),
                               child: Text(
                                 valueOrDefault<String>(
-                                  widget.createAt?.toString(),
+                                  dateTimeFormat(
+                                    'd/M h:mm a',
+                                    widget.createAt,
+                                    locale: FFLocalizations.of(context)
+                                        .languageCode,
+                                  ),
                                   'DateTime',
                                 ),
                                 style: FlutterFlowTheme.of(context)

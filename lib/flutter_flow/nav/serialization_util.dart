@@ -98,9 +98,9 @@ DateTimeRange? dateTimeRangeFromString(String dateTimeRangeStr) {
   );
 }
 
-LatLng? latLngFromString(String latLngStr) {
-  final pieces = latLngStr.split(',');
-  if (pieces.length != 2) {
+LatLng? latLngFromString(String? latLngStr) {
+  final pieces = latLngStr?.split(',');
+  if (pieces == null || pieces.length != 2) {
     return null;
   }
   return LatLng(
@@ -204,18 +204,34 @@ dynamic deserializeParam<T>(
       case ParamType.SupabaseRow:
         final data = json.decode(param) as Map<String, dynamic>;
         switch (T) {
+          case TourismRow:
+            return TourismRow(data);
+          case LandUseDataRow:
+            return LandUseDataRow(data);
           case WCtipsRow:
             return WCtipsRow(data);
+          case LandUseImpactRow:
+            return LandUseImpactRow(data);
           case NotificationsRow:
             return NotificationsRow(data);
+          case LandUseCompreshionRow:
+            return LandUseCompreshionRow(data);
           case GalleryRow:
             return GalleryRow(data);
           case UsersRow:
             return UsersRow(data);
+          case TnCRow:
+            return TnCRow(data);
+          case ClimateChangeTipsRow:
+            return ClimateChangeTipsRow(data);
           case RiversRow:
             return RiversRow(data);
           case NewsRow:
             return NewsRow(data);
+          case BiodiversityTipsRow:
+            return BiodiversityTipsRow(data);
+          case EventsRow:
+            return EventsRow(data);
           default:
             return null;
         }

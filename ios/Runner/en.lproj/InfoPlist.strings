@@ -1,1 +1,3 @@
 PermissionGroupNotification = "Allow Us To Notify You About Emergency ";
+ = "Allow us to call API";
+NSLocationWhenInUseUsageDescription = "Allow us to locate youu";

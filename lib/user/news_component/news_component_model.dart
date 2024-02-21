@@ -14,8 +14,10 @@ import 'package:provider/provider.dart';
 class NewsComponentModel extends FlutterFlowModel<NewsComponentWidget> {
   /// Initialization and disposal methods.
 
+  @override
   void initState(BuildContext context) {}
 
+  @override
   void dispose() {}
 
   /// Action blocks are added here.
